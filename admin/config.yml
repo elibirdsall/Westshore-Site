@@ -24,4 +24,9 @@ collections:
         widget: "select"
         options: ["Buying Guides", "Financing", "Land Basics", "Community News"]
       - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Shown on the blog card — a sentence or two." }
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+        hint: "Shown at the top of the post and as the thumbnail on the blog and homepage cards."
       - { label: "Body", name: "body", widget: "markdown" }

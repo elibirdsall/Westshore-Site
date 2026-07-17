@@ -43,6 +43,7 @@ function readPosts() {
         date: data.date ? new Date(data.date) : new Date(),
         category: data.category || "Buying Guides",
         excerpt: data.excerpt || "",
+        featuredImage: data.featured_image || "",
         bodyHtml: marked.parse(content),
         readMinutes,
       };
@@ -134,7 +135,7 @@ ${SITE_HEADER}
   </div>
 </div>
 
-<section class="section">
+${post.featuredImage ? `<div class="post-hero"><img src="${escapeHtml(post.featuredImage)}" alt="${escapeHtml(post.title)}" /></div>\n\n` : ""}<section class="section">
   <div class="wrap">
     <p class="post-meta" style="margin-bottom:28px">${formatDate(post.date)} · ${post.readMinutes} min read</p>
     <div class="post-body">
@@ -154,11 +155,16 @@ ${SITE_FOOTER}
 }
 
 function renderCard(post) {
+  const media = post.featuredImage
+    ? `        <div class="post-card-media"><img src="${escapeHtml(post.featuredImage)}" alt="${escapeHtml(post.title)}" loading="lazy" /></div>\n`
+    : "";
   return `      <article class="post-card">
+${media}        <div class="post-card-body">
         <span class="eyebrow">${escapeHtml(post.category)}</span>
         <h3 class="display"><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></h3>
         <p>${escapeHtml(post.excerpt)}</p>
         <span class="post-meta">${formatDate(post.date)} · ${post.readMinutes} min read</span>
+        </div>
       </article>`;
 }
 
