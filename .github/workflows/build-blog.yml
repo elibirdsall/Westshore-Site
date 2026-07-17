@@ -1,0 +1,36 @@
+name: Build blog pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install build script dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Render blog pages
+        run: node scripts/build-blog.js
+
+      - name: Commit generated pages
+        run: |
+          git config user.name "westshore-blog-bot"
+          git config user.email "actions@github.com"
+          git add blog.html index.html blog/*.html
+          git diff --cached --quiet || git commit -m "Render blog pages [skip ci]"
+          git push

@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: elibirdsall/Westshore-Site
+  branch: main
+  base_url: https://westshore-site.vercel.app
+  auth_endpoint: api/auth
+
+publish_mode: simple
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Buying Guides", "Financing", "Land Basics", "Community News"]
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Shown on the blog card — a sentence or two." }
+      - { label: "Body", name: "body", widget: "markdown" }
