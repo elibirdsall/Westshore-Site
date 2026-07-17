@@ -667,8 +667,23 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 
 /* ---- blog post hero image -------------------------------------------------- */
 
-.post-hero { aspect-ratio: 21 / 9; max-height: 420px; overflow: hidden; }
+.post-hero { aspect-ratio: 21 / 9; overflow: hidden; }
 .post-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+@media (min-width: 921px) {
+  .post-hero {
+    aspect-ratio: auto;
+    display: flex;
+    justify-content: center;
+    padding: 32px 24px;
+  }
+  .post-hero img {
+    width: 100%;
+    max-width: var(--maxw);
+    height: 320px;
+    border: 1px solid var(--line);
+  }
+}
 
 /* ---- interior page head -------------------------------------------------- */
 
