@@ -216,12 +216,15 @@
       <p>The beauty of Florida's natural landscape is one of the biggest reasons people choose to own land here. Browse waterfront properties, wooded acreage, open homesites, and recreational land — and envision the possibilities of owning your own piece of Florida.</p>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-tile"><img src="images/hero-river.webp" alt="Florida riverfront property" /></div>
-      <div class="gallery-tile"><img src="images/hero-lake.webp" alt="Florida lakeside property" /></div>
-      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
-      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
-      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
-      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-01.webp" data-alt="Sandy trail winding through a Florida pine forest at golden hour"><img src="images/gallery-01.webp" alt="Sandy trail winding through a Florida pine forest at golden hour" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-02.webp" data-alt="Live oak canopy arching over a sunlit path"><img src="images/gallery-02.webp" alt="Live oak canopy arching over a sunlit path" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-03.webp" data-alt="Spanish moss draping a shadowed Florida oak hammock"><img src="images/gallery-03.webp" alt="Spanish moss draping a shadowed Florida oak hammock" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-04.webp" data-alt="Pine trunk rising above saw palmetto understory"><img src="images/gallery-04.webp" alt="Pine trunk rising above saw palmetto understory" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-05.webp" data-alt="Paved walkway beneath a moss-draped live oak canopy"><img src="images/gallery-05.webp" alt="Paved walkway beneath a moss-draped live oak canopy" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-06.webp" data-alt="A grand live oak draped in Spanish moss in an open field"><img src="images/gallery-06.webp" alt="A grand live oak draped in Spanish moss in an open field" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-07.webp" data-alt="Two white-tailed deer at the edge of a Florida yard"><img src="images/gallery-07.webp" alt="Two white-tailed deer at the edge of a Florida yard" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-08.webp" data-alt="Open lawn framed by palms under a blue Florida sky"><img src="images/gallery-08.webp" alt="Open lawn framed by palms under a blue Florida sky" loading="lazy" /></button>
+      <button type="button" class="gallery-tile" data-lightbox data-full="images/gallery-09.webp" data-alt="Lily pads across open water in the Florida wetlands"><img src="images/gallery-09.webp" alt="Lily pads across open water in the Florida wetlands" loading="lazy" /></button>
     </div>
   </div>
 </section>
@@ -296,6 +299,18 @@
     </div>
   </div>
 </section>
+
+<!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <span class="lightbox-count" aria-hidden="true"></span>
+  <button type="button" class="lightbox-btn lightbox-close" data-action="close" aria-label="Close">✕</button>
+  <button type="button" class="lightbox-btn lightbox-prev" data-action="prev" aria-label="Previous photo">‹</button>
+  <button type="button" class="lightbox-btn lightbox-next" data-action="next" aria-label="Next photo">›</button>
+  <div class="lightbox-stage">
+    <img class="lightbox-img" src="" alt="" />
+    <span class="lightbox-cap"></span>
+  </div>
+</div>
 </main>
 
 <footer class="site-footer">
