@@ -1,10 +1,9 @@
 # Westshore Land Sales — Static Site
 
 Plain HTML/CSS/JS marketing site. No build step, no framework. Clean URLs via
-`vercel.json`. Blog is intended to be powered by **Sanity**.
+`vercel.json`. The blog is a git-backed CMS (Decap) — see below.
 
-Real marketing copy is in place throughout. The only placeholder text is the
-blog previews (to be replaced by Sanity). Contact details, prices, the "[XX+]
+Real marketing copy is in place throughout. Contact details, prices, the "[XX+]
 years" figure, and gallery photos are placeholders pending client content.
 
 ## Pages
@@ -13,13 +12,20 @@ years" figure, and gallery photos are placeholders pending client content.
 index.html                     Home / lander
 developer.html                 About the developer (About, We Buy Land,
                                Our Commitment, Success Stories)
-blog.html                      Blog listing — wire to Sanity
+blog.html                      Blog listing — auto-generated post grid
 community-westshore-pines.html Community page 1
 community-cypress-bend.html    Community page 2
 css/styles.css                 All styling + design tokens (top of file)
-js/main.js                     Contact-form demo submit + mobile nav toggle
+js/main.js                     Contact-form submit (Formspree) + mobile nav
 images/                        hero-river.webp, hero-lake.webp
-vercel.json                    Clean-URL config
+vercel.json                    Clean-URL config + /admin OAuth rewrites
+admin/                         Decap CMS (content editor UI)
+api/                           GitHub OAuth provider for Decap (Vercel functions)
+content/posts/                 Blog posts as markdown (source of truth)
+blog/                          Generated post pages — don't hand-edit
+scripts/build-blog.js          Renders content/posts/*.md into blog/*.html
+                               and refreshes blog.html + index.html grids
+.github/workflows/build-blog.yml  Runs the script whenever a post is published
 ```
 
 Each community page is: hero → contact form (top) → community details →
@@ -43,12 +49,37 @@ to test exactly as deployed, run `npx serve .` from this folder.)
    no build command. `vercel.json` enables clean URLs (`/developer`, `/blog`,
    `/community-cypress-bend`, etc.).
 
-## Blog + Sanity
+## Blog (Decap CMS)
 
-`blog.html` and the homepage teaser use `.post-card` markup with a comment
-marking the integration point. Recommended: a build-time pull (Astro/Eleventy +
-`@sanity/client`) so posts render into static HTML — best for the SEO goal.
-Alternatively fetch client-side on load. Keep the existing card classes.
+Posts are written through a browser-based editor at `/admin` (no code, no git
+knowledge needed day-to-day) and stored as markdown files in
+`content/posts/*.md` — that folder is the source of truth. Publishing a post
+there triggers `.github/workflows/build-blog.yml`, which runs
+`scripts/build-blog.js` to:
+
+1. Render each post to a static page at `blog/<slug>.html`.
+2. Refresh the post grid in `blog.html` (all posts) and the teaser section in
+   `index.html` (latest 3), between the `<!-- BLOG-POSTS:START/END -->` and
+   `<!-- BLOG-TEASER:START/END -->` marker comments — don't hand-edit inside
+   those markers, they get overwritten on the next build.
+
+Because everything is committed back as plain static HTML, there's no
+client-side fetch and no runtime dependency on a CMS API — good for SEO and
+consistent with the rest of the site having no build step at request time.
+
+### One-time setup (not done yet)
+
+Decap's `github` backend needs an OAuth app so the `/admin` login works:
+
+1. On GitHub: **Settings → Developer settings → OAuth Apps → New OAuth App**.
+   Homepage URL: `https://westshore-site.vercel.app`. Authorization callback
+   URL: `https://westshore-site.vercel.app/callback`.
+2. In Vercel project settings, add environment variables
+   `OAUTH_GITHUB_CLIENT_ID` and `OAUTH_GITHUB_CLIENT_SECRET` from that OAuth
+   app, then redeploy.
+3. If a custom domain is added later, update the OAuth app's homepage/callback
+   URL (GitHub OAuth Apps support only one callback URL) and `base_url` in
+   `admin/config.yml` to match.
 
 ## Contact form
 
@@ -73,4 +104,5 @@ Ken Burns hero respects `prefers-reduced-motion`.
   entries; replace placeholder gallery tiles with real property photos.
 - Replace the video placeholder in `index.html`.
 - Fill in phone number, email, prices, and the "[XX+] years" figure.
-- Wire the Sanity blog.
+- Complete the Decap CMS OAuth setup (see "Blog" section above) so `/admin`
+  login works.
