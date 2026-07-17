@@ -490,6 +490,35 @@ select:focus-visible, textarea:focus-visible {
   gap: 12px;
 }
 
+/* ---- blog post body ------------------------------------------------------- */
+
+.post-body { max-width: 74ch; }
+.post-body h2 {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin: 32px 0 12px;
+}
+.post-body h3 {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin: 26px 0 10px;
+}
+.post-body p { margin-bottom: 18px; }
+.post-body ul, .post-body ol { margin: 0 0 18px 22px; }
+.post-body li { margin-bottom: 8px; }
+.post-body img { margin: 24px 0; border: 1px solid var(--line); max-width: 100%; }
+.post-body blockquote {
+  border-left: 3px solid var(--red);
+  padding-left: 18px;
+  color: var(--muted);
+  font-style: italic;
+  margin: 24px 0;
+}
+
 /* ---- gallery ------------------------------------------------------------- */
 
 .gallery-grid {
