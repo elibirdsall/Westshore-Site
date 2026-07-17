@@ -54,9 +54,10 @@ Alternatively fetch client-side on load. Keep the existing card classes.
 
 Fields: first name, last name, email, phone, and a "Community interested in"
 dropdown (Westshore Pines Ranches / Cypress Bend / Both communities / Not sure
-yet), plus the SMS/email consent line. It currently fakes a submit via
-`js/main.js`. Point the `<form>` at a real handler (Formspree, Basin, etc.) and
-remove the demo submit before launch.
+yet), plus the SMS/email consent line. Submits via `fetch` to Formspree
+(`https://formspree.io/f/mzdneqje`), handled in `js/main.js`; the `<form>`
+also carries a matching `action`/`method` as a no-JS fallback. Each page sets
+a `_subject` hidden field so replies from Formspree are easy to tell apart.
 
 ## Design
 
@@ -72,4 +73,4 @@ Ken Burns hero respects `prefers-reduced-motion`.
   entries; replace placeholder gallery tiles with real property photos.
 - Replace the video placeholder in `index.html`.
 - Fill in phone number, email, prices, and the "[XX+] years" figure.
-- Wire the contact form and the Sanity blog.
+- Wire the Sanity blog.

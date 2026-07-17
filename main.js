@@ -1,16 +1,59 @@
 // Westshore Land Sales — static site scripts
 
-// Demo contact form: fake a submit and show the success panel.
-// Replace with a real endpoint (Formspree, Basin, Netlify Forms, or your own
-// handler) when the client is ready. See README.
+// Contact form: submit to Formspree via fetch (AJAX) so the page never
+// reloads; falls back to a normal POST if JS is unavailable.
 (function () {
   var form = document.getElementById("demo-form");
   if (!form) return;
+  var success = document.getElementById("demo-success");
+  var error = document.getElementById("demo-error");
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var submitLabel = submitBtn ? submitBtn.textContent : "";
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var success = document.getElementById("demo-success");
-    form.style.display = "none";
-    if (success) success.style.display = "grid";
+    if (error) {
+      error.style.display = "none";
+      error.textContent = "";
+    }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+    }
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+      .then(function (response) {
+        if (response.ok) {
+          form.style.display = "none";
+          if (success) success.style.display = "grid";
+          return;
+        }
+        return response.json().then(function (data) {
+          var message =
+            data && data.errors && data.errors.length
+              ? data.errors.map(function (err) { return err.message; }).join(", ")
+              : "Something went wrong. Please try again or call us directly.";
+          throw new Error(message);
+        });
+      })
+      .catch(function (err) {
+        if (error) {
+          error.textContent =
+            (err && err.message) ||
+            "Sorry, we couldn't send your request. Please try again or call us directly.";
+          error.style.display = "block";
+        }
+      })
+      .finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      });
   });
 })();
 
@@ -24,6 +67,7 @@
   if (!tiles.length || !box) return;
 
   var imgEl = box.querySelector(".lightbox-img");
+  var capEl = box.querySelector(".lightbox-cap");
   var countEl = box.querySelector(".lightbox-count");
   var items = tiles.map(function (t) {
     return { src: t.getAttribute("data-full"), alt: t.getAttribute("data-alt") || "" };
@@ -35,6 +79,7 @@
     i = (n + items.length) % items.length;
     imgEl.src = items[i].src;
     imgEl.alt = items[i].alt;
+    if (capEl) capEl.textContent = items[i].alt;
     if (countEl) countEl.textContent = (i + 1) + " / " + items.length;
   }
   function open(n) {

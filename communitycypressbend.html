@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cypress Bend — Westshore Land Sales</title>
+<meta name="description" content="Cypress Bend — riverfront and recreational acreage in Florida from Westshore Land Sales." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <span class="brand-mark display">Westshore</span>
+      <span class="brand-sub">Land Sales · Florida</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="nav-link" href="/#communities">Communities</a>
+      <a class="nav-link" href="/#why">Why Florida</a>
+      <a class="nav-link" href="/#financing">Financing</a>
+      <div class="nav-item nav-has-dropdown">
+        <a class="nav-link nav-trigger" href="developer">Developer <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="developer#about">About the Developer</a>
+            <a href="developer#we-buy-land">We Buy Land</a>
+            <a href="developer#commitment">Our Commitment</a>
+            <a href="developer#success-stories">Success Stories</a>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="blog">Blog</a>
+      <a class="btn btn-red" href="#contact">Request Info</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- COMMUNITY HERO -->
+<section class="chero on-dark">
+  <div class="chero-bg"><img src="images/hero-river.webp" alt="Cypress Bend riverfront acreage" /></div>
+  <div class="wrap">
+    <span class="eyebrow">Community 02 · Westshore Land Sales</span>
+    <h1 class="display">Cypress Bend</h1>
+    <p class="chero-lede">Riverfront and recreational acreage for the outdoor enthusiast — room to roam, fish, and explore along Florida's scenic waterways, with building sites surveyed and ready.</p>
+    <div class="chero-meta">
+      <span>Riverfront</span>
+      <span>Recreational</span>
+      <span>Florida</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM (top, right after hero) -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="section-head" style="margin-bottom:0">
+      <span class="eyebrow">Request information</span>
+      <h2 class="display">Request info for Cypress Bend</h2>
+      <p>Tell us a bit about what you're looking for and a land consultant will follow up with availability, pricing, maps, and financing options for this community.</p>
+      <p class="hero-phone" style="color:var(--muted);margin-top:18px">Prefer to talk? <a href="tel:8005550134" style="color:var(--blue)">(800) 555-0134</a></p>
+    </div>
+    <form class="contact-form" id="demo-form" action="https://formspree.io/f/mzdneqje" method="POST">
+      <input type="hidden" name="_subject" value="New land inquiry — Cypress Bend" />
+      <div class="field-row">
+        <div class="field"><label for="cf-first">First name</label><input id="cf-first" name="first_name" type="text" required autocomplete="given-name" /></div>
+        <div class="field"><label for="cf-last">Last name</label><input id="cf-last" name="last_name" type="text" required autocomplete="family-name" /></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" required autocomplete="email" /></div>
+        <div class="field"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" required autocomplete="tel" /></div>
+      </div>
+      <div class="field">
+        <label for="cf-community">Community interested in</label>
+        <select id="cf-community" name="community" required>
+          <option value="" disabled>Select a community…</option>
+          <option>Westshore Pines Ranches</option>
+          <option selected>Cypress Bend</option>
+          <option>Both communities</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <p class="form-error" id="demo-error" style="display:none" role="alert"></p>
+      <button type="submit" class="btn btn-red">Request Property Info</button>
+      <p class="form-consent">By subscribing, you agree to receive marketing email, phone calls, voicemail and text messages at the phone number and email address provided. Reply STOP to cancel. Msg rates may apply.</p>
+    </form>
+    <div class="form-success" id="demo-success" style="display:none" role="status">
+      <span class="eyebrow">Request received</span>
+      <h3 class="display" style="font-size:2rem">Thank you — we'll be in touch.</h3>
+      <p>A land consultant will reach out shortly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE COMMUNITY -->
+<section class="section">
+  <div class="wrap dev-split">
+    <div class="dev-copy">
+      <span class="eyebrow">About the community</span>
+      <h2 class="display">Made for the outdoors</h2>
+      <p>Cypress Bend offers riverfront and recreational acreage along Florida's waterways — the kind of land made for fishing, hunting, paddling, and weekend escapes, with plenty of room to build when you're ready.</p>
+      <p>As with every Westshore property, buyers receive clear information and friendly guidance throughout, so you can purchase with confidence and understand exactly what you're getting.</p>
+      <ul class="feature-list">
+        <li>Riverfront and recreational acreage</li>
+        <li>Professional property surveys</li>
+        <li>Title work and warranty deeds (where applicable)</li>
+        <li>Financing assistance available</li>
+        <li>Local, state, and federal approvals when required</li>
+      </ul>
+    </div>
+    <div class="dev-media">
+      <img src="images/hero-river.webp" alt="Riverfront acreage at Cypress Bend" />
+      <span class="plat-tag">Cypress Bend</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTY PHOTO GALLERY -->
+<section class="section" id="gallery" style="background:var(--mist-dark)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Photo gallery</span>
+      <h2 class="display">Property photo gallery</h2>
+      <p>A look at the land and setting at Cypress Bend. Additional property photos coming soon.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-tile"><img src="images/hero-river.webp" alt="Cypress Bend riverfront" /></div>
+      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
+      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
+      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
+      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
+      <div class="gallery-tile ph"><span class="gallery-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2l1.1-1.7A1 1 0 0 1 8.4 4.8h7.2a1 1 0 0 1 .8.5L17.5 7h2A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.2"/></svg>Property Photo</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand display">Westshore Land Sales</div>
+        <p class="footer-blurb">High-quality Florida land for sale — waterfront, recreational, investment, and homesite properties selected for lasting value.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/#communities">Communities</a></li>
+          <li><a href="community-westshore-pines">Westshore Pines Ranches</a></li>
+          <li><a href="community-cypress-bend">Cypress Bend</a></li>
+          <li><a href="developer">About the Developer</a></li>
+          <li><a href="blog">Land Buying Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8005550134">(800) 555-0134</a></li>
+          <li><a href="mailto:info@example.com">info@example.com</a></li>
+          <li><a href="#contact">Request property info</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. · Demo site — contact details and imagery are placeholders pending client content.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -473,6 +473,14 @@ select:focus-visible, textarea:focus-visible {
 }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .form-consent { font-size: 0.74rem; line-height: 1.55; color: var(--muted); }
+.form-error {
+  font-size: 0.85rem;
+  color: var(--red);
+  border: 1px solid var(--red);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin: 0;
+}
 .form-success {
   background: var(--paper);
   border: 1px dashed var(--red);
@@ -544,6 +552,17 @@ button.gallery-tile img { transition: transform 0.35s ease; }
   height: auto;
   border: 1px solid rgba(238, 241, 246, 0.14);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+.lightbox-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -34px;
+  text-align: center;
+  color: var(--blue-soft);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 .lightbox-btn {
   position: absolute;
