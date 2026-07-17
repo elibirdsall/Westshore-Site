@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Land Buying Blog — Westshore Land Sales</title>
-<meta name="description" content="Guides on buying, financing, and owning rural land in Florida from Westshore Land Sales." />
+<meta name="description" content="Guides on buying, financing, and owning land in Florida from Westshore Land Sales." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
   <div class="wrap">
     <a href="/" class="brand">
       <span class="brand-mark display">Westshore</span>
-      <span class="brand-sub">Land Sales · FL Gulf Coast</span>
+      <span class="brand-sub">Land Sales · Florida</span>
     </a>
     <nav class="site-nav" aria-label="Main">
       <a class="nav-link" href="/#communities">Communities</a>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <a class="nav-link" href="blog">Blog</a>
-      <a class="btn btn-gold" href="/#contact">Request Info</a>
+      <a class="btn btn-red" href="/#contact">Request Info</a>
     </nav>
   </div>
 </header>
@@ -51,11 +51,10 @@
   ===========================================================================
   SANITY INTEGRATION POINT
   Replace the placeholder cards below with posts fetched from Sanity.
-  Two common approaches for a static site:
-    1) Build step: use @sanity/client in a small Node script or a static-site
-       generator (Astro/Eleventy) to render post cards at deploy time.
-    2) Client-side: fetch from Sanity's API on page load and inject cards here.
-  Each card follows the .post-card markup pattern shown below.
+    1) Build-time (recommended for SEO): use a static generator (Astro/Eleventy)
+       with @sanity/client to render post cards at deploy.
+    2) Client-side: fetch from Sanity's API on load and inject cards here.
+  Keep the .post-card / .post-grid markup so styling carries over.
   ===========================================================================
 -->
 <section class="section">
@@ -64,19 +63,19 @@
       <article class="post-card">
         <span class="eyebrow">Buying Guides</span>
         <h3 class="display"><a href="#">How to Buy Land in Florida: A Step-by-Step Guide</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Sample post excerpt — this will be replaced by content from Sanity.</p>
         <span class="post-meta">Sample post · 7 min read</span>
       </article>
       <article class="post-card">
         <span class="eyebrow">Financing</span>
-        <h3 class="display"><a href="#">Land Loans vs. Cash: 5 Ways to Finance Florida Acreage</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="display"><a href="#">Land Loans vs. Cash: Ways to Finance Florida Acreage</a></h3>
+        <p>Sample post excerpt — this will be replaced by content from Sanity.</p>
         <span class="post-meta">Sample post · 5 min read</span>
       </article>
       <article class="post-card">
         <span class="eyebrow">Buying Guides</span>
         <h3 class="display"><a href="#">What Is a Land Package? Survey, Title, and Deed Explained</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Sample post excerpt — this will be replaced by content from Sanity.</p>
         <span class="post-meta">Sample post · 6 min read</span>
       </article>
     </div>
@@ -89,14 +88,14 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand display">Westshore Land Sales</div>
-        <p class="footer-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="footer-blurb">High-quality Florida land for sale — waterfront, recreational, investment, and homesite properties selected for lasting value.</p>
       </div>
       <div>
         <h4>Explore</h4>
         <ul>
           <li><a href="/#communities">Communities</a></li>
-          <li><a href="/#package">The Land Package</a></li>
-          <li><a href="/#financing">Financing</a></li>
+          <li><a href="community-westshore-pines">Westshore Pines Ranches</a></li>
+          <li><a href="community-cypress-bend">Cypress Bend</a></li>
           <li><a href="developer">About the Developer</a></li>
           <li><a href="blog">Land Buying Blog</a></li>
         </ul>
@@ -110,7 +109,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. · Demo site — copy is lorem ipsum placeholder pending client content.</div>
+    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. · Demo site — blog content is placeholder pending Sanity integration.</div>
   </div>
 </footer>
 

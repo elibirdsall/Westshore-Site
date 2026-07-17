@@ -1,80 +1,75 @@
 # Westshore Land Sales — Static Site
 
-A plain HTML/CSS/JS marketing site. No build step, no framework, no Node.js
-required. Blog is intended to be powered by **Sanity** (see below).
+Plain HTML/CSS/JS marketing site. No build step, no framework. Clean URLs via
+`vercel.json`. Blog is intended to be powered by **Sanity**.
 
-**This is a client demo.** All body copy is lorem ipsum; phone numbers, prices,
-stats, and the hero video are placeholders. Titles and section labels are real.
+Real marketing copy is in place throughout. The only placeholder text is the
+blog previews (to be replaced by Sanity). Contact details, prices, the "[XX+]
+years" figure, and gallery photos are placeholders pending client content.
 
-## Files
+## Pages
 
 ```
-index.html        Home / lander (Ken Burns hero, communities, why FL,
-                  land package, financing, contact form, blog teaser)
-developer.html    About-the-developer page (About, We Buy Land,
-                  Our Commitment, Success Stories — one scrolling page)
-blog.html         Blog listing placeholder — wire to Sanity
-css/styles.css    All styling + design tokens (colors/fonts at the top)
-js/main.js        Contact-form demo submit + mobile nav toggle
-images/           hero-river.webp, hero-lake.webp
+index.html                     Home / lander
+developer.html                 About the developer (About, We Buy Land,
+                               Our Commitment, Success Stories)
+blog.html                      Blog listing — wire to Sanity
+community-westshore-pines.html Community page 1
+community-cypress-bend.html    Community page 2
+css/styles.css                 All styling + design tokens (top of file)
+js/main.js                     Contact-form demo submit + mobile nav toggle
+images/                        hero-river.webp, hero-lake.webp
+vercel.json                    Clean-URL config
 ```
+
+Each community page is: hero → contact form (top) → community details →
+property photo gallery (bottom).
 
 ## View locally
 
-Just double-click `index.html` — it opens in any browser. (Google Fonts load
-over the network; everything else is local.)
+Double-click `index.html`. (Locally, links use clean paths that Vercel resolves;
+to test exactly as deployed, run `npx serve .` from this folder.)
 
 ## Deploy to Vercel
 
 1. Push this folder to a GitHub repo:
    ```bash
-   git init && git add -A && git commit -m "Westshore static demo"
+   git init && git add -A && git commit -m "Westshore static site"
    git branch -M main
    git remote add origin <your-repo-url>
    git push -u origin main
    ```
-2. Import the repo at [vercel.com/new](https://vercel.com/new) and click
-   **Deploy**. Vercel serves the HTML as-is — **Framework Preset: Other**, no
-   build command, no output directory needed. `index.html` is served at `/`.
+2. Import at [vercel.com/new](https://vercel.com/new), Framework Preset **Other**,
+   no build command. `vercel.json` enables clean URLs (`/developer`, `/blog`,
+   `/community-cypress-bend`, etc.).
 
-Optional: to serve clean URLs (`/developer` instead of `/developer.html`), add a
-`vercel.json` with `{ "cleanUrls": true }`. Links in this site use the `.html`
-suffix so they also work when opening files directly, which is the safest
-default for a demo.
+## Blog + Sanity
 
-## Wiring the blog to Sanity
+`blog.html` and the homepage teaser use `.post-card` markup with a comment
+marking the integration point. Recommended: a build-time pull (Astro/Eleventy +
+`@sanity/client`) so posts render into static HTML — best for the SEO goal.
+Alternatively fetch client-side on load. Keep the existing card classes.
 
-`blog.html` (and the teaser on `index.html`) contain placeholder `.post-card`
-markup with a comment marking the integration point. Two common paths:
+## Contact form
 
-- **Build-time (recommended):** use a static generator like Astro or Eleventy
-  with `@sanity/client` to pull posts and render cards at deploy. Vercel runs the
-  build; output stays static and fast.
-- **Client-side:** fetch from Sanity's API on page load and inject cards into the
-  `.post-grid`. Simplest to bolt on, but posts aren't in the initial HTML (weaker
-  for SEO — a tradeoff worth noting given the SEO goal).
+Fields: first name, last name, email, phone, and a "Community interested in"
+dropdown (Westshore Pines Ranches / Cypress Bend / Both communities / Not sure
+yet), plus the SMS/email consent line. It currently fakes a submit via
+`js/main.js`. Point the `<form>` at a real handler (Formspree, Basin, etc.) and
+remove the demo submit before launch.
 
-Either way, keep the existing `.post-card` / `.post-grid` classes so the styling
-carries over.
+## Design
+
+Red / white / blue theme: navy is dominant, generous white space, and **red is
+used only as an accent** — primary call-to-action buttons, the eyebrow ticks,
+survey markers, star bullets, and status tags. Blue carries links and labels.
+Fonts: Big Shoulders Display, Newsreader, IBM Plex Mono (Google Fonts). The
+Ken Burns hero respects `prefers-reduced-motion`.
 
 ## Before going live
 
-- Swap the hero photos in `images/` (keep the filenames) or edit the
-  `.hero-slide` blocks in `index.html` to add more.
-- Replace the video placeholder in `index.html` with the client's embed.
-- Point the contact form at a real handler — Formspree, Basin, or similar. In
-  `index.html` set the `<form>` `action`/`method`, then remove the demo submit in
-  `js/main.js`.
-- Replace lorem ipsum copy, phone number, prices, and market stats.
-- Swap the success-story and About photos for real past-community images.
-
-## Design notes (for the client pitch)
-
-- Palette from the land: pine green, sand, river blue, with a brass-gold action
-  color drawn from the harvested fields and pine bark in the hero photos.
-- Recurring survey/plat motif — dashed boundaries, corner markers, and
-  section-township-range labels — reinforces "surveyed, titled, ready to build."
-- Fonts: Big Shoulders Display (headlines), Newsreader (body), IBM Plex Mono
-  (survey labels), loaded from Google Fonts.
-- The Ken Burns hero respects `prefers-reduced-motion` (freezes on the first
-  photo for users who opt out of animation).
+- Swap hero + gallery photos in `images/` (keep filenames) or add `.gallery-tile`
+  entries; replace placeholder gallery tiles with real property photos.
+- Replace the video placeholder in `index.html`.
+- Fill in phone number, email, prices, and the "[XX+] years" figure.
+- Wire the contact form and the Sanity blog.
