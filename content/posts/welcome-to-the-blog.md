@@ -1,8 +1,10 @@
 ---
-title: "Welcome to the Westshore Land Sales Blog"
+title: Welcome to the Westshore Land Sales Blog
 date: 2026-07-17
-category: "Buying Guides"
-excerpt: "A first look at what you'll find here — practical guides on buying, financing, and owning land in Florida."
+category: Buying Guides
+excerpt: A first look at what you'll find here — practical guides on buying,
+  financing, and owning land in Florida.
+featured_image: /images/blog/westshore-land-sales.jpg
 ---
 
 Welcome to the Westshore Land Sales blog. This is where we'll share practical guides on buying, financing, and owning land in Florida — from understanding surveys and title work to comparing financing options and choosing the right community for your goals.
