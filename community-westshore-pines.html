@@ -64,7 +64,8 @@
       <p>Tell us a bit about what you're looking for and a land consultant will follow up with availability, pricing, maps, and financing options for this community.</p>
       <p class="hero-phone" style="color:var(--muted);margin-top:18px">Prefer to talk? <a href="tel:8005550134" style="color:var(--blue)">(800) 555-0134</a></p>
     </div>
-    <form class="contact-form" id="demo-form">
+    <form class="contact-form" id="demo-form" action="https://formspree.io/f/mzdneqje" method="POST">
+      <input type="hidden" name="_subject" value="New land inquiry — Westshore Pines Ranches" />
       <div class="field-row">
         <div class="field"><label for="cf-first">First name</label><input id="cf-first" name="first_name" type="text" required autocomplete="given-name" /></div>
         <div class="field"><label for="cf-last">Last name</label><input id="cf-last" name="last_name" type="text" required autocomplete="family-name" /></div>
@@ -83,13 +84,14 @@
           <option>Not sure yet</option>
         </select>
       </div>
+      <p class="form-error" id="demo-error" style="display:none" role="alert"></p>
       <button type="submit" class="btn btn-red">Request Property Info</button>
       <p class="form-consent">By subscribing, you agree to receive marketing email, phone calls, voicemail and text messages at the phone number and email address provided. Reply STOP to cancel. Msg rates may apply.</p>
     </form>
     <div class="form-success" id="demo-success" style="display:none" role="status">
       <span class="eyebrow">Request received</span>
       <h3 class="display" style="font-size:2rem">Thank you — we'll be in touch.</h3>
-      <p>A land consultant will reach out shortly. (Demo form — no data was sent.)</p>
+      <p>A land consultant will reach out shortly.</p>
     </div>
   </div>
 </section>
