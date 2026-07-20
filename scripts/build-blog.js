@@ -66,7 +66,12 @@ const SITE_HEADER = `<header class="site-header">
       <span class="brand-mark display">Westshore</span>
       <span class="brand-sub">Land Sales · Florida</span>
     </a>
-    <nav class="site-nav" aria-label="Main">
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
       <a class="nav-link" href="/#communities">Communities</a>
       <a class="nav-link" href="/#why">Why Florida</a>
       <a class="nav-link" href="/#financing">Financing</a>
