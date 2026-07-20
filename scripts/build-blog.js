@@ -107,7 +107,7 @@ const SITE_FOOTER = `<footer class="site-footer">
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:8005550134">(800) 555-0134</a></li>
+          <li><a href="tel:8004447355">(800) 444-SELL</a></li>
           <li><a href="mailto:info@example.com">info@example.com</a></li>
           <li><a href="/#contact">Request property info</a></li>
         </ul>
