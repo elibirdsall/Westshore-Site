@@ -87,7 +87,7 @@ const SITE_HEADER = `<header class="site-header">
         </div>
       </div>
       <a class="nav-link" href="/blog">Blog</a>
-      <a class="btn btn-red" href="/#contact">Request Info</a>
+      <a class="btn btn-orange" href="/#contact">Request Info</a>
     </nav>
   </div>
 </header>`;
@@ -146,7 +146,7 @@ ${post.featuredImage ? `<div class="post-hero"><img src="${escapeHtml(post.featu
     <div class="post-body">
 ${post.bodyHtml}
     </div>
-    <p style="margin-top:40px"><a class="btn btn-navy" href="/blog">← Back to all posts</a></p>
+    <p style="margin-top:40px"><a class="btn btn-teal" href="/blog">← Back to all posts</a></p>
   </div>
 </section>
 </main>
