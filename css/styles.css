@@ -14,6 +14,8 @@
   --mist: #f7fbfb;        /* page background (bright, near-white) */
   --mist-dark: #e9f4f4;   /* alternating section background */
   --bright: #4bc7d2;      /* clean, bright color-block panels (color-row) */
+  --chrome-dark: #14737d;    /* header / page-head — darkened version of --bright */
+  --chrome-darkest: #0d5058; /* footer / nav dropdown — darker still */
   --ink: #1a2b2c;         /* body text */
   --muted: #55706f;       /* secondary text on light */
   --line: #d3e4e3;        /* borders */
@@ -115,7 +117,7 @@ select:focus-visible, textarea:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--teal-deep);
+  background: var(--chrome-dark);
   border-bottom: 1px solid rgba(238, 241, 246, 0.12);
 }
 .site-header .wrap {
@@ -190,7 +192,7 @@ select:focus-visible, textarea:focus-visible {
   z-index: 60;
 }
 .dropdown-inner {
-  background: var(--teal-deepest);
+  background: var(--chrome-darkest);
   border: 1px solid rgba(238, 241, 246, 0.14);
   border-radius: var(--radius);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
@@ -677,12 +679,12 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 
 /* ---- interior page head -------------------------------------------------- */
 
-.page-head { background: var(--teal-deep); color: var(--mist); padding: 72px 0; }
+.page-head { background: var(--chrome-dark); color: var(--mist); padding: 72px 0; }
 .page-head h1 { font-size: clamp(2.6rem, 5vw, 4rem); margin-top: 12px; }
 
 /* ---- footer -------------------------------------------------------------- */
 
-.site-footer { background: var(--teal-deepest); color: var(--teal-soft); padding: 56px 0 40px; }
+.site-footer { background: var(--chrome-darkest); color: var(--teal-soft); padding: 56px 0 40px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
 .site-footer h4 {
   font-family: var(--font-mono), monospace;
