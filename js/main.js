@@ -121,8 +121,53 @@
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
   if (!toggle || !nav) return;
+
+  function closeNav() {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
   toggle.addEventListener("click", function () {
     var open = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // Close the mobile menu once a nav link is pressed — same-page anchor
+  // links (#communities, #contact, etc.) don't reload the page, so without
+  // this the menu is left open covering the content underneath.
+  nav.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (nav.classList.contains("is-open")) closeNav();
+    });
+  });
+})();
+
+// Developer dropdown: on devices without real hover (touchscreens, including
+// wide tablets/desktop-mode phones above the hamburger breakpoint where the
+// dropdown would otherwise rely purely on CSS :hover), make the trigger a
+// tap-to-toggle button instead — fixes the dropdown getting stuck open with
+// no way to close it, and clamps it so it can't render off-screen.
+(function () {
+  var group = document.querySelector(".nav-has-dropdown");
+  var trigger = document.querySelector(".nav-trigger");
+  if (!group || !trigger) return;
+  var hasRealHover =
+    window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (hasRealHover) return;
+
+  function close() {
+    group.classList.remove("open");
+  }
+
+  trigger.addEventListener("click", function (e) {
+    if (window.innerWidth <= 920) return; // hamburger mode: dropdown is always expanded via CSS
+    e.preventDefault();
+    group.classList.toggle("open");
+  });
+  document.addEventListener("click", function (e) {
+    if (!group.contains(e.target)) close();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") close();
   });
 })();
