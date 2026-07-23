@@ -320,31 +320,6 @@ select:focus-visible, textarea:focus-visible {
 .parcel p { font-size: 0.98rem; color: var(--muted); flex: 1; }
 .parcel .btn { align-self: flex-start; }
 
-/* ---- why florida --------------------------------------------------------- */
-
-.benefits {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 36px;
-  margin-top: 28px;
-}
-.benefits li {
-  display: flex;
-  gap: 12px;
-  align-items: baseline;
-  color: var(--ink);
-  font-size: 1.02rem;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--line);
-}
-.benefits li::before {
-  content: "\2605"; /* ★ subtle American accent */
-  color: var(--orange);
-  font-size: 0.82em;
-  flex: none;
-}
-
 /* ---- alternating color-block rows ----------------------------------------
    A colored panel fills one half of the section behind the media column,
    flipping sides row to row. Desktop only — collapses to a plain background
@@ -370,7 +345,7 @@ select:focus-visible, textarea:focus-visible {
 /* ---- how to purchase (deed document) ------------------------------------- */
 
 .package-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
-.package-media { display: grid; gap: 24px; }
+.media-stack { display: grid; gap: 24px; }
 
 /* video placeholder */
 .video-frame {
@@ -882,7 +857,6 @@ button.gallery-tile img { transition: transform 0.35s ease; }
   .hero .wrap { padding-top: 96px; padding-bottom: 96px; }
   .parcel-grid { grid-template-columns: 1fr; }
   .post-grid { grid-template-columns: 1fr 1fr; }
-  .benefits { grid-template-columns: 1fr; }
   .package-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
