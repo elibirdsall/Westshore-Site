@@ -344,9 +344,29 @@ select:focus-visible, textarea:focus-visible {
   flex: none;
 }
 
+/* ---- alternating color-block rows ----------------------------------------
+   A colored panel fills one half of the section behind the media column,
+   flipping sides row to row. Desktop only — collapses to a plain background
+   once the layout stacks to one column. ---------------------------------- */
+
+@media (min-width: 921px) {
+  .color-row { position: relative; }
+  .color-row::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    background: var(--teal-deep);
+    z-index: 0;
+  }
+  .color-row.flip::before { left: 0; right: 50%; }
+  .color-row > .wrap { position: relative; z-index: 1; }
+  .color-row .dev-media .plat-tag { background: var(--teal-deepest); }
+}
+
 /* ---- how to purchase (deed document) ------------------------------------- */
 
-.package-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.package-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
 .package-media { display: grid; gap: 24px; }
 
 /* video placeholder */
