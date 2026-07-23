@@ -13,6 +13,7 @@
   --orange-dark: #cc5f13;
   --mist: #f7fbfb;        /* page background (bright, near-white) */
   --mist-dark: #e9f4f4;   /* alternating section background */
+  --bright: #4bc7d2;      /* clean, bright color-block panels (color-row) */
   --ink: #1a2b2c;         /* body text */
   --muted: #55706f;       /* secondary text on light */
   --line: #d3e4e3;        /* borders */
@@ -356,12 +357,14 @@ select:focus-visible, textarea:focus-visible {
     position: absolute;
     inset: 0;
     left: 50%;
-    background: var(--teal-deep);
+    background: var(--bright);
     z-index: 0;
   }
   .color-row.flip::before { left: 0; right: 50%; }
   .color-row > .wrap { position: relative; z-index: 1; }
+  .color-row .dev-media { border-color: rgba(255, 255, 255, 0.7); outline-color: rgba(255, 255, 255, 0.55); }
   .color-row .dev-media .plat-tag { background: var(--teal-deepest); }
+  .color-row .video-frame { border-color: rgba(255, 255, 255, 0.55); }
 }
 
 /* ---- how to purchase (deed document) ------------------------------------- */
