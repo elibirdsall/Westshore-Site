@@ -347,6 +347,38 @@ select:focus-visible, textarea:focus-visible {
 /* ---- how to purchase (deed document) ------------------------------------- */
 
 .package-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.package-media { display: grid; gap: 24px; }
+
+/* video placeholder */
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--teal-deepest);
+  border: 1px dashed var(--line);
+  display: grid;
+  place-items: center;
+}
+.video-inner { text-align: center; padding: 24px; }
+.play-btn {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(242, 118, 30, 0.92);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.play-btn:hover { background: var(--orange-dark); }
+.video-inner p {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-soft);
+}
+
 .deed {
   background: var(--paper);
   border: 1px solid var(--line);
