@@ -13,8 +13,9 @@ index.html                     Home / lander
 developer.html                 About the developer (About, Our Commitment,
                                Our Communities)
 blog.html                      Blog listing — auto-generated post grid
-community-westshore-pines.html Community page 1
-community-cypress-bend.html    Community page 2
+financing.html                 Financing category breakdown
+community-westshore-pines.html Blue Springs Ranch community page (URL kept
+                               from the retired Westshore Pines Ranches page)
 css/styles.css                 All styling + design tokens (top of file)
 js/main.js                     Contact-form submit (Formspree) + mobile nav
 images/                        hero-river.webp, hero-lake.webp
@@ -47,7 +48,7 @@ to test exactly as deployed, run `npx serve .` from this folder.)
    ```
 2. Import at [vercel.com/new](https://vercel.com/new), Framework Preset **Other**,
    no build command. `vercel.json` enables clean URLs (`/developer`, `/blog`,
-   `/community-cypress-bend`, etc.).
+   `/financing`, etc.).
 
 ## Blog (Decap CMS)
 
@@ -84,8 +85,7 @@ Decap's `github` backend needs an OAuth app so the `/admin` login works:
 ## Contact form
 
 Fields: first name, last name, email, phone, and a "Community interested in"
-dropdown (Westshore Pines Ranches / Cypress Bend / Both communities / Not sure
-yet), plus the SMS/email consent line. Submits via `fetch` to Formspree
+dropdown (Blue Springs Ranch / Not sure yet), plus the SMS/email consent line. Submits via `fetch` to Formspree
 (`https://formspree.io/f/mzdneqje`), handled in `js/main.js`; the `<form>`
 also carries a matching `action`/`method` as a no-JS fallback. Each page sets
 a `_subject` hidden field so replies from Formspree are easy to tell apart.
