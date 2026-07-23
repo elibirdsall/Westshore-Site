@@ -105,6 +105,7 @@ const SITE_FOOTER = `<footer class="site-footer">
           <li><a href="/community-westshore-pines">Westshore Pines Ranches</a></li>
           <li><a href="/community-cypress-bend">Cypress Bend</a></li>
           <li><a href="/developer">About the Developer</a></li>
+          <li><a href="/financing">Financing Options</a></li>
           <li><a href="/blog">Land Buying Blog</a></li>
         </ul>
       </div>

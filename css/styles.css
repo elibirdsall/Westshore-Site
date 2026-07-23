@@ -382,10 +382,21 @@ select:focus-visible, textarea:focus-visible {
 
 /* ---- financing ----------------------------------------------------------- */
 
-.fin-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.fin-item { background: var(--paper); padding: 24px 20px; }
-.fin-item h3 { font-size: 1.35rem; margin-bottom: 8px; }
-.fin-item p { font-size: 0.88rem; color: var(--muted); }
+.fin-bullets { list-style: none; display: grid; gap: 4px; margin-top: 8px; }
+.fin-bullets li {
+  display: flex;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.02rem;
+}
+.fin-bullets li::before {
+  content: "\2713";
+  color: var(--orange);
+  font-family: var(--font-mono), monospace;
+  font-weight: 700;
+}
+.fin-bullets strong { color: var(--ink); }
 .fin-disclaimer { margin-top: 20px; font-size: 0.86rem; font-style: italic; color: var(--muted); }
 
 /* ---- contact ------------------------------------------------------------- */
@@ -816,7 +827,6 @@ button.gallery-tile img { transition: transform 0.35s ease; }
   .hero .wrap { padding-top: 96px; padding-bottom: 96px; }
   .parcel-grid { grid-template-columns: 1fr; }
   .post-grid { grid-template-columns: 1fr 1fr; }
-  .fin-list { grid-template-columns: 1fr 1fr; }
   .benefits { grid-template-columns: 1fr; }
   .package-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -853,7 +863,7 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 }
 
 @media (max-width: 600px) {
-  .post-grid, .fin-list, .field-row, .footer-grid,
+  .post-grid, .field-row, .footer-grid,
   .commitment-grid, .story-grid, .gallery-grid { grid-template-columns: 1fr; }
   .brand { flex-wrap: wrap; row-gap: 0; }
   .brand-sub { font-size: 0.55rem; letter-spacing: 0.14em; }
