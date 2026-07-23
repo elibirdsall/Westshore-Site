@@ -3,15 +3,15 @@
 Plain HTML/CSS/JS marketing site. No build step, no framework. Clean URLs via
 `vercel.json`. The blog is a git-backed CMS (Decap) — see below.
 
-Real marketing copy is in place throughout. Contact details, prices, the "[XX+]
-years" figure, and gallery photos are placeholders pending client content.
+Real marketing copy is in place throughout. Contact details, prices, and
+gallery photos are placeholders pending client content.
 
 ## Pages
 
 ```
 index.html                     Home / lander
-developer.html                 About the developer (About, We Buy Land,
-                               Our Commitment, Success Stories)
+developer.html                 About the developer (About, Our Commitment,
+                               Our Communities)
 blog.html                      Blog listing — auto-generated post grid
 community-westshore-pines.html Community page 1
 community-cypress-bend.html    Community page 2

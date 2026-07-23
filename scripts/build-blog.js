@@ -80,9 +80,8 @@ const SITE_HEADER = `<header class="site-header">
         <div class="dropdown">
           <div class="dropdown-inner">
             <a href="/developer#about">About the Developer</a>
-            <a href="/developer#we-buy-land">We Buy Land</a>
             <a href="/developer#commitment">Our Commitment</a>
-            <a href="/developer#success-stories">Success Stories</a>
+            <a href="/developer#our-communities">Our Communities</a>
           </div>
         </div>
       </div>
