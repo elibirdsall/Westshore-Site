@@ -87,7 +87,7 @@ The right property today can become the perfect place to call home in the future
 
 At Westshore Land Sales, we help buyers discover premium Florida land that offers natural beauty, long-term value, and future potential.
 
-Whether you are looking for a future retirement homesite, recreational acreage, waterfront property, or a place to build your dream home, our team makes the process simple and transparent.
+Whether you are looking for a future retirement homesite, recreational acreage, lakefront property, or a place to build your dream home, our team makes the process simple and transparent.
 
 Every property we offer is carefully selected with usability, location, and lasting value in mind. From your first inquiry through closing, we are dedicated to helping you find land that matches your vision.
 

@@ -59,7 +59,7 @@ One of the advantages of buying land in Florida is the variety of options availa
 Buyers can find:
 
 - Large wooded homesites
-- Waterfront properties
+- Lakefront properties
 - Recreational acreage
 - Rural retreats
 - Future retirement properties
@@ -113,7 +113,7 @@ The best property is one that fits your lifestyle today while supporting your pl
 
 At Westshore Land Sales, we help buyers discover exceptional Florida land selected for natural beauty, usability, and long-term value.
 
-Whether you are searching for a future homesite, recreational property, waterfront land, or a place to build your retirement dream, our team provides a simple and transparent buying experience.
+Whether you are searching for a future homesite, recreational property, lakefront land, or a place to build your retirement dream, our team provides a simple and transparent buying experience.
 
 We believe owning land is about creating opportunities for the future. Every property we offer is carefully selected to help buyers find a place they can enjoy for years to come.
 

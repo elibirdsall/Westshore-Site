@@ -96,7 +96,7 @@ const SITE_FOOTER = `<footer class="site-footer">
     <div class="footer-grid">
       <div>
         <div class="footer-brand display">Westshore Land Sales</div>
-        <p class="footer-blurb">High-quality Florida land for sale — waterfront, recreational, investment, and homesite properties selected for lasting value.</p>
+        <p class="footer-blurb">Exceptional Quality Florida land for sale - Recreational, Lakefront, Investment, Homesites, Ranch land and more</p>
       </div>
       <div>
         <h4>Explore</h4>
@@ -117,7 +117,7 @@ const SITE_FOOTER = `<footer class="site-footer">
         </ul>
       </div>
     </div>
-    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. · Demo site — contact details and imagery are placeholders pending client content.</div>
+    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. A subsidiary of Westshore Acquisitions, LLC. · Demo site — contact details and imagery are placeholders pending client content.</div>
   </div>
 </footer>`;
 
