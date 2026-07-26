@@ -4,5 +4,8 @@
   "rewrites": [
     { "source": "/auth", "destination": "/api/auth" },
     { "source": "/callback", "destination": "/api/callback" }
+  ],
+  "redirects": [
+    { "source": "/community-westshore-pines", "destination": "/blue-springs-ranch", "permanent": true }
   ]
 }

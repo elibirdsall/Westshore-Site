@@ -14,7 +14,7 @@ developer.html                 About the developer (About, Our Commitment,
                                Our Communities)
 blog.html                      Blog listing — auto-generated post grid
 financing.html                 Financing category breakdown
-community-westshore-pines.html Blue Springs Ranch community page (URL kept
+blue-springs-ranch.html Blue Springs Ranch community page (URL kept
                                from the retired Westshore Pines Ranches page)
 css/styles.css                 All styling + design tokens (top of file)
 js/main.js                     Contact-form submit (Formspree) + mobile nav
