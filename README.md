@@ -3,8 +3,10 @@
 Plain HTML/CSS/JS marketing site. No build step, no framework. Clean URLs via
 `vercel.json`. The blog is a git-backed CMS (Decap) — see below.
 
-Real marketing copy is in place throughout. Contact details, prices, and
-gallery photos are placeholders pending client content.
+**Live site:** https://westshore-site.vercel.app
+
+Real marketing copy, contact details, and client-supplied photos are in place
+throughout.
 
 ## Pages
 
@@ -18,7 +20,7 @@ blue-springs-ranch.html Blue Springs Ranch community page (URL kept
                                from the retired Westshore Pines Ranches page)
 css/styles.css                 All styling + design tokens (top of file)
 js/main.js                     Contact-form submit (Formspree) + mobile nav
-images/                        hero-river.webp, hero-lake.webp
+images/                        Hero, gallery, and community photos (webp)
 vercel.json                    Clean-URL config + /admin OAuth rewrites
 admin/                         Decap CMS (content editor UI)
 api/                           GitHub OAuth provider for Decap (Vercel functions)
@@ -92,17 +94,15 @@ a `_subject` hidden field so replies from Formspree are easy to tell apart.
 
 ## Design
 
-Red / white / blue theme: navy is dominant, generous white space, and **red is
-used only as an accent** — primary call-to-action buttons, the eyebrow ticks,
-survey markers, star bullets, and status tags. Blue carries links and labels.
-Fonts: Big Shoulders Display, Newsreader, IBM Plex Mono (Google Fonts). The
-Ken Burns hero respects `prefers-reduced-motion`.
+Teal / white / orange theme: teal is dominant, generous white space, and
+**orange is used only as an accent** — primary call-to-action buttons, the
+eyebrow ticks, survey markers, and status tags. Fonts: Big Shoulders Display,
+Newsreader, IBM Plex Mono (Google Fonts). The Ken Burns hero respects
+`prefers-reduced-motion`.
 
-## Before going live
+## Known remaining items
 
-- Swap hero + gallery photos in `images/` (keep filenames) or add `.gallery-tile`
-  entries; replace placeholder gallery tiles with real property photos.
-- Replace the video placeholder in `index.html`.
-- Fill in phone number, email, prices, and the "[XX+] years" figure.
-- Complete the Decap CMS OAuth setup (see "Blog" section above) so `/admin`
-  login works.
+- Replace the video placeholder in `index.html` (`#package` section) with the
+  client's actual video once it's delivered.
+- Confirm the Decap CMS OAuth setup (see "Blog" section above) is complete so
+  `/admin` login works.
