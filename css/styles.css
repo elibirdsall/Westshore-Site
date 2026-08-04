@@ -882,13 +882,13 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 
 /* ---- ad landing pages ----------------------------------------------------- */
 
-.cta-banner { background: var(--teal-deep); color: var(--mist); text-align: center; padding: 64px 0; }
-.cta-banner .eyebrow { justify-content: center; color: var(--teal-soft); }
-.cta-banner h2 { font-size: clamp(2.6rem, 7vw, 4.4rem); color: var(--orange); margin: 12px 0 20px; }
-.cta-banner p { max-width: 62ch; margin: 0 auto 16px; color: #d7deea; }
+.cta-banner { background: var(--mist-dark); color: var(--ink); text-align: center; padding: 64px 0; }
+.cta-banner .eyebrow { justify-content: center; color: var(--teal); }
+.cta-banner h2 { font-size: clamp(2.6rem, 7vw, 4.4rem); color: var(--orange-dark); margin: 12px 0 20px; }
+.cta-banner p { max-width: 62ch; margin: 0 auto 16px; color: var(--muted); }
 .cta-banner .btn { margin-top: 12px; }
-.lp-banner-contact { margin-top: 20px; font-family: var(--font-mono), monospace; font-size: 0.8rem; letter-spacing: 0.06em; }
-.lp-banner-contact a { color: #fff; text-decoration-color: var(--orange); }
+.lp-banner-contact { margin-top: 20px; font-family: var(--font-mono), monospace; font-size: 0.8rem; letter-spacing: 0.06em; color: var(--muted); }
+.lp-banner-contact a { color: var(--teal); text-decoration-color: var(--orange); }
 
 /* minimal header (no site nav) */
 .lp-header-cta { display: flex; align-items: center; gap: 22px; }
