@@ -882,7 +882,7 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 
 /* ---- ad landing pages ----------------------------------------------------- */
 
-.cta-banner { background: var(--mist-dark); color: var(--ink); text-align: center; padding: 64px 0; }
+.cta-banner { background: var(--bright); color: var(--ink); text-align: center; padding: 64px 0; }
 .cta-banner .eyebrow { justify-content: center; color: var(--teal); }
 .cta-banner h2 { font-size: clamp(2.6rem, 7vw, 4.4rem); color: var(--orange-dark); margin: 12px 0 20px; }
 .cta-banner p { max-width: 62ch; margin: 0 auto 16px; color: var(--muted); }
