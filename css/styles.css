@@ -372,6 +372,8 @@ select:focus-visible, textarea:focus-visible {
 /* ---- how to purchase (deed document) ------------------------------------- */
 
 .package-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+.package-grid.flip { grid-template-columns: 0.9fr 1.1fr; }
+.package-grid.flip .media-stack { order: 1; }
 .media-stack { display: grid; gap: 24px; }
 
 /* video placeholder */
@@ -1017,6 +1019,8 @@ button.gallery-tile img { transition: transform 0.35s ease; }
   .subnav { top: 0; }
   .dev-split { grid-template-columns: 1fr; gap: 32px; }
   .dev-split.flip .dev-media { order: 0; }
+  .package-grid.flip { grid-template-columns: 1fr; }
+  .package-grid.flip .media-stack { order: 0; }
   .why-grid { grid-template-columns: 1fr; gap: 24px; }
   .commitment-grid, .story-grid { grid-template-columns: 1fr 1fr; }
 }
