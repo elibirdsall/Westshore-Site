@@ -876,6 +876,15 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 .feature-list { list-style: none; display: grid; gap: 12px; margin-top: 8px; }
 .feature-list li { display: flex; gap: 14px; font-size: 1.02rem; }
 .feature-list li::before { content: "\2713"; color: var(--orange); font-family: var(--font-mono), monospace; font-weight: 700; }
+.feature-list.cols-2 { grid-template-columns: 1fr 1fr; column-gap: 32px; }
+
+/* ---- ad landing pages ----------------------------------------------------- */
+
+.cta-banner { background: var(--teal-deep); color: var(--mist); text-align: center; padding: 64px 0; }
+.cta-banner .eyebrow { justify-content: center; color: var(--teal-soft); }
+.cta-banner h2 { font-size: clamp(2.6rem, 7vw, 4.4rem); color: var(--orange); margin: 12px 0 20px; }
+.cta-banner p { max-width: 62ch; margin: 0 auto 16px; color: #d7deea; }
+.cta-banner .btn { margin-top: 12px; }
 
 /* ---- responsive ---------------------------------------------------------- */
 
@@ -917,6 +926,10 @@ button.gallery-tile img { transition: transform 0.35s ease; }
   .dev-split.flip .dev-media { order: 0; }
   .why-grid { grid-template-columns: 1fr; gap: 24px; }
   .commitment-grid, .story-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .feature-list.cols-2 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
