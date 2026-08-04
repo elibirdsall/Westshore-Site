@@ -940,7 +940,7 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 .lp-contact-row a:hover { color: var(--teal-soft); }
 .lp-contact-row .lp-ico { color: var(--orange); }
 
-.lp-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+.lp-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: center; }
 .lp-hero-grid .video-frame { aspect-ratio: 16 / 9; border-color: rgba(255, 255, 255, 0.4); }
 
 .lp-form-card {
