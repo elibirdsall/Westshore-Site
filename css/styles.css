@@ -762,7 +762,7 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 .dev-section.alt { background: var(--mist-dark); }
 
 .dev-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.dev-split.flip .dev-media { order: 2; }
+.dev-split.flip .dev-media { order: -1; }
 
 /* text top-left, its image top-right; second image bottom-left, checklist bottom-right */
 .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 56px; align-items: start; }
@@ -938,8 +938,9 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 .lp-contact-row a:hover { color: var(--teal-soft); }
 .lp-contact-row .lp-ico { color: var(--orange); }
 
-.lp-hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 26px; align-items: start; }
-.lp-hero-grid .video-frame { aspect-ratio: 16 / 9; border-color: rgba(255, 255, 255, 0.4); }
+.lp-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: stretch; }
+.lp-hero-grid .video-frame { aspect-ratio: auto; min-height: 100%; border-color: rgba(255, 255, 255, 0.4); }
+.lp-form-card { height: 100%; justify-content: center; }
 
 .lp-form-card {
   background: var(--paper);
