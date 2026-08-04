@@ -885,6 +885,98 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 .cta-banner h2 { font-size: clamp(2.6rem, 7vw, 4.4rem); color: var(--orange); margin: 12px 0 20px; }
 .cta-banner p { max-width: 62ch; margin: 0 auto 16px; color: #d7deea; }
 .cta-banner .btn { margin-top: 12px; }
+.lp-banner-contact { margin-top: 20px; font-family: var(--font-mono), monospace; font-size: 0.8rem; letter-spacing: 0.06em; }
+.lp-banner-contact a { color: #fff; text-decoration-color: var(--orange); }
+
+/* minimal header (no site nav) */
+.lp-header-cta { display: flex; align-items: center; gap: 22px; }
+.lp-header-cta .phone-link {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-decoration: none;
+  text-align: right;
+}
+.lp-header-cta .phone-link:hover { color: var(--teal-soft); }
+.lp-header-cta .btn { padding: 10px 18px; }
+
+/* hero: headline + video + form above the fold */
+.lp-hero { position: relative; overflow: hidden; background: var(--teal-deepest); color: var(--mist); }
+.lp-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.lp-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.lp-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 22, 24, 0.94) 0%, rgba(7, 46, 50, 0.88) 100%);
+}
+.lp-hero .wrap { position: relative; z-index: 1; padding-top: 40px; padding-bottom: 48px; }
+.lp-hero-head { text-align: center; max-width: 880px; margin: 0 auto 30px; }
+.lp-hero-head .eyebrow { justify-content: center; }
+.lp-hero-head h1 { font-size: clamp(2.9rem, 6vw, 4.6rem); color: #fff; margin: 12px 0 6px; }
+.lp-hero-tagline {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 2.4vw, 1.55rem);
+  letter-spacing: 0.05em;
+  color: var(--teal-soft);
+  margin-bottom: 14px;
+}
+.lp-hero-lede { color: #eaf6f6; max-width: 64ch; margin: 0 auto 18px; }
+.lp-contact-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+.lp-contact-row a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.lp-contact-row a:hover { color: var(--teal-soft); }
+.lp-contact-row .lp-ico { color: var(--orange); }
+
+.lp-hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 26px; align-items: start; }
+.lp-hero-grid .video-frame { aspect-ratio: 16 / 9; border-color: rgba(255, 255, 255, 0.4); }
+
+.lp-form-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 24px 24px 22px;
+  display: grid;
+  gap: 13px;
+  color: var(--ink);
+}
+.lp-form-head { text-align: center; display: grid; gap: 4px; margin-bottom: 2px; }
+.lp-form-kicker {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange-dark);
+}
+.lp-form-head h2 { font-size: 1.65rem; }
+.lp-form-card .field input, .lp-form-card .field select { padding: 10px 13px; }
+.lp-form-card .form-consent { font-size: 0.66rem; }
+
+@media (max-width: 920px) {
+  .lp-hero-grid { grid-template-columns: 1fr; gap: 20px; }
+  .lp-hero .wrap { padding-top: 28px; padding-bottom: 36px; }
+  .lp-hero-head { margin-bottom: 22px; }
+}
+@media (max-width: 700px) {
+  .lp-hide-sm { display: none; }
+  /* phone + email stay visible in the hero contact row, so the header slims
+     down to brand + CTA to keep the fold tight */
+  .lp-header-cta .phone-link { display: none; }
+  .lp .brand-sub { display: none; }
+  .lp .brand-mark { font-size: 1.1rem; }
+  .lp-header-cta .btn { padding: 9px 12px; font-size: 0.68rem; letter-spacing: 0.06em; }
+  .lp-hero-head h1 { font-size: clamp(2.4rem, 10vw, 3rem); }
+  .lp-contact-row { font-size: 0.78rem; gap: 8px 20px; }
+}
 
 /* ---- responsive ---------------------------------------------------------- */
 

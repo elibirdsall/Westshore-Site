@@ -14,54 +14,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="lp">
 
+<!-- Minimal header: no site nav on this page — ad traffic stays on the funnel. -->
 <header class="site-header">
   <div class="wrap">
     <a href="/" class="brand">
       <span class="brand-mark display">Westshore</span>
       <span class="brand-sub">Land Sales · Florida</span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Main">
-      <a class="nav-link" href="/#communities">Communities</a>
-      <a class="nav-link" href="/#why">Why Florida</a>
-      <a class="nav-link" href="/financing">Financing</a>
-      <div class="nav-item nav-has-dropdown">
-        <a class="nav-link nav-trigger" href="/developer">Developer <span class="caret" aria-hidden="true">▾</span></a>
-        <div class="dropdown">
-          <div class="dropdown-inner">
-            <a href="/developer#about">About the Developer</a>
-            <a href="/developer#commitment">Our Commitment</a>
-            <a href="/developer#our-communities">Our Communities</a>
-          </div>
-        </div>
-      </div>
-      <a class="nav-link" href="/blog">Blog</a>
+    <div class="lp-header-cta">
+      <a href="tel:8668505263" class="phone-link"><span class="phone-word">(866) 850-LAND</span><span class="phone-digits">(866) 850-5263</span></a>
       <a class="btn btn-orange" href="#reserve">Reserve VIP Appointment</a>
-    </nav>
+    </div>
   </div>
 </header>
 
 <main>
-<!-- HERO -->
-<section class="chero on-dark">
-  <div class="chero-bg"><img src="images/hero-sunset-land.webp" alt="Golden sunset light over open land at Blue Springs Ranch" /></div>
+<!-- HERO: headline + video + lead form, all above the fold -->
+<section class="lp-hero on-dark">
+  <div class="lp-hero-bg"><img src="images/hero-sunset-land.webp" alt="" aria-hidden="true" /></div>
   <div class="wrap">
-    <span class="eyebrow">VIP Presale Event · September 12</span>
-    <h1 class="display">Blue Springs Ranch</h1>
-    <p class="display" style="font-size:1.35rem;letter-spacing:0.02em;text-transform:none;color:var(--teal-soft);margin-bottom:16px;">Florida Land Worth Walking</p>
-    <p class="chero-lede">In the heart of the Florida Panhandle lies a place where towering pines, majestic oaks, and rolling pastures come together to create something increasingly difficult to find — large, beautiful tracts of land with room to breathe. Welcome to Blue Springs Ranch, a private collection of 10+ acre homesites thoughtfully divided from one exceptional property.</p>
-    <div class="chero-meta">
-      <span>10–17 Acre Homesites</span>
-      <span>Marianna, FL</span>
-      <span>VIP Presale · Sept 12</span>
+    <div class="lp-hero-head">
+      <span class="eyebrow">VIP Presale Event · September 12 · Marianna, FL</span>
+      <h1 class="display">Blue Springs Ranch</h1>
+      <p class="lp-hero-tagline">Florida Land Worth Walking · 10–17 Acre Homesites</p>
+      <p class="lp-hero-lede lp-hide-sm">A private collection of 10+ acre homesites in the heart of the Florida Panhandle — towering pines, majestic oaks, and rolling pastures with room to breathe. Reserve your appointment before these properties are released to the public.</p>
+      <div class="lp-contact-row">
+        <a href="tel:8668505263"><span class="lp-ico" aria-hidden="true">✆</span> (866) 850-LAND · (866) 850-5263</a>
+        <a href="mailto:info@westshorelandsales.com"><span class="lp-ico" aria-hidden="true">✉</span> info@westshorelandsales.com</a>
+      </div>
     </div>
-    <p style="margin-top:28px"><a class="btn btn-orange" href="#reserve">Reserve Your Appointment Today</a></p>
+    <div class="lp-hero-grid">
+      <div class="video-frame">
+        <div class="video-inner">
+          <button class="play-btn" aria-label="Play Blue Springs Ranch video (placeholder)">▶</button>
+          <p>Blue Springs Ranch video · coming soon</p>
+        </div>
+      </div>
+      <!-- Form submission is not wired up yet — pending decision on Formable vs. another provider. -->
+      <form class="lp-form-card" id="reserve" action="#" method="POST" onsubmit="return false;">
+        <div class="lp-form-head">
+          <span class="lp-form-kicker">VIP Presale · September 12</span>
+          <h2 class="display">Reserve My VIP Appointment</h2>
+        </div>
+        <input type="hidden" name="_subject" value="VIP Presale reservation — Blue Springs Ranch" />
+        <div class="field-row">
+          <div class="field"><label for="vf-first">First name</label><input id="vf-first" name="first_name" type="text" required autocomplete="given-name" /></div>
+          <div class="field"><label for="vf-last">Last name</label><input id="vf-last" name="last_name" type="text" required autocomplete="family-name" /></div>
+        </div>
+        <div class="field"><label for="vf-phone">Phone</label><input id="vf-phone" name="phone" type="tel" required autocomplete="tel" /></div>
+        <div class="field"><label for="vf-email">Email</label><input id="vf-email" name="email" type="email" required autocomplete="email" /></div>
+        <div class="field">
+          <label for="vf-time">Preferred time on Sept 12</label>
+          <select id="vf-time" name="preferred_time" required>
+            <option value="" disabled selected>Select a time…</option>
+            <option>Morning</option>
+            <option>Midday</option>
+            <option>Afternoon</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-orange">Reserve My VIP Appointment</button>
+        <p class="form-consent">By subscribing, you agree to receive marketing email, phone calls, voicemail and text messages at the phone number and email address provided. Reply STOP to cancel. Msg rates may apply.</p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -96,15 +113,13 @@
   </div>
 </section>
 
-<!-- BUILT FOR PRIVACY (video placeholder + parcel checklist) -->
+<!-- BUILT FOR PRIVACY -->
 <section class="section color-row">
   <div class="wrap package-grid">
     <div class="media-stack">
-      <div class="video-frame">
-        <div class="video-inner">
-          <button class="play-btn" aria-label="Play Blue Springs Ranch video (placeholder)">▶</button>
-          <p>Blue Springs Ranch video · coming soon</p>
-        </div>
+      <div class="dev-media">
+        <img src="images/bsr-06.webp" alt="Cattle resting in a golden Blue Springs Ranch field" />
+        <span class="plat-tag">Blue Springs Ranch</span>
       </div>
       <div class="deed">
         <div class="deed-head">Every parcel includes</div>
@@ -122,6 +137,7 @@
       <span class="eyebrow">Built for privacy</span>
       <h2 class="display">Build your property your way</h2>
       <p>Whether your vision is a secluded cabin tucked beneath the pines or a custom home overlooking open pasture, Blue Springs Ranch gives you the freedom to build your property your way.</p>
+      <p style="margin-top:14px"><a class="btn btn-teal" href="#reserve">Reserve Your Appointment</a></p>
     </div>
   </div>
 </section>
@@ -215,6 +231,7 @@
       <span class="eyebrow">Buy with confidence</span>
       <h2 class="display">Clear information. No surprises.</h2>
       <p>Just a straightforward path to land ownership. Every property at Blue Springs Ranch includes professional guidance from reservation through closing.</p>
+      <p style="margin-top:14px"><a class="btn btn-teal" href="#reserve">Schedule Your VIP Appointment</a></p>
     </div>
     <div class="deed">
       <div class="deed-head">Every property includes</div>
@@ -231,7 +248,7 @@
 </section>
 
 <!-- PHOTO GALLERY -->
-<section class="section" id="gallery">
+<section class="section" id="gallery" style="background:var(--mist-dark)">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Photo gallery</span>
@@ -263,48 +280,12 @@
     <p>Before Blue Springs Ranch is offered to the general public, we're inviting a limited number of qualified buyers to attend our exclusive VIP Presale Event. Appointments will be scheduled throughout the day on a first-come, first-served basis.</p>
     <p>With a limited number of tracts available, we expect many — or all — of the properties to be reserved during the event. If you're serious about owning land at Blue Springs Ranch, this is your opportunity to secure the best selection before public release.</p>
     <a class="btn btn-orange" href="#reserve">Schedule Your VIP Appointment</a>
-  </div>
-</section>
-
-<!-- LEAD FORM -->
-<section class="section contact" id="reserve">
-  <div class="wrap contact-grid">
-    <div class="section-head" style="margin-bottom:0">
-      <span class="eyebrow">Reserve your appointment</span>
-      <h2 class="display">Schedule your VIP appointment</h2>
-      <p>Complete the form and contact Westshore Land Sales to reserve your preferred appointment time for September 12. We'll answer your questions, provide available tract information, and help you determine which property best fits your goals.</p>
-      <p class="hero-phone" style="color:var(--muted);margin-top:18px">Prefer to talk? <a href="tel:8668505263" style="color:var(--teal)" class="phone-link"><span class="phone-word">(866) 850-LAND</span><span class="phone-digits">(866) 850-5263</span></a></p>
-    </div>
-    <!-- Form submission is not wired up yet — pending decision on Formable vs. another provider. -->
-    <form class="contact-form" id="vip-form" action="#" method="POST" onsubmit="return false;">
-      <input type="hidden" name="_subject" value="VIP Presale reservation — Blue Springs Ranch" />
-      <div class="field-row">
-        <div class="field"><label for="vf-first">First name</label><input id="vf-first" name="first_name" type="text" required autocomplete="given-name" /></div>
-        <div class="field"><label for="vf-last">Last name</label><input id="vf-last" name="last_name" type="text" required autocomplete="family-name" /></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label for="vf-email">Email</label><input id="vf-email" name="email" type="email" required autocomplete="email" /></div>
-        <div class="field"><label for="vf-phone">Phone</label><input id="vf-phone" name="phone" type="tel" required autocomplete="tel" /></div>
-      </div>
-      <div class="field">
-        <label for="vf-time">Preferred appointment time on Sept 12</label>
-        <select id="vf-time" name="preferred_time" required>
-          <option value="" disabled selected>Select a time…</option>
-          <option>Morning</option>
-          <option>Midday</option>
-          <option>Afternoon</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-orange">Reserve My VIP Appointment</button>
-      <p class="form-consent">By subscribing, you agree to receive marketing email, phone calls, voicemail and text messages at the phone number and email address provided. Reply STOP to cancel. Msg rates may apply.</p>
-      <p class="form-consent" style="color:var(--orange-dark)">Note: this form is not yet connected to a lead provider — call the number above to book an appointment until it's wired up.</p>
-    </form>
+    <p class="lp-banner-contact">Or call <a href="tel:8668505263">(866) 850-LAND</a> · <a href="mailto:info@westshorelandsales.com">info@westshorelandsales.com</a></p>
   </div>
 </section>
 
 <!-- CLOSING -->
-<section class="section" style="text-align:center;background:var(--mist-dark)">
+<section class="section" style="text-align:center">
   <div class="wrap">
     <span class="eyebrow" style="justify-content:center">Blue Springs Ranch</span>
     <h2 class="display" style="font-size:clamp(1.8rem,3.6vw,2.6rem);margin:10px 0 6px">Large-acreage homesites. Natural beauty. Exceptional location.</h2>
@@ -333,13 +314,10 @@
         <p class="footer-blurb">Exceptional Quality Florida land for sale - Recreational, Lakefront, Investment, Homesites, Ranch land and more</p>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h4>Blue Springs Ranch</h4>
         <ul>
-          <li><a href="/#communities">Communities</a></li>
-          <li><a href="/blue-springs-ranch">Blue Springs Ranch</a></li>
-          <li><a href="/developer">About the Developer</a></li>
-          <li><a href="/financing">Financing Options</a></li>
-          <li><a href="/blog">Land Buying Blog</a></li>
+          <li><a href="#reserve">Reserve VIP appointment</a></li>
+          <li><a href="#gallery">Photo gallery</a></li>
         </ul>
       </div>
       <div>
@@ -347,7 +325,6 @@
         <ul>
           <li><a href="tel:8668505263" class="phone-link"><span class="phone-word">(866) 850-LAND</span><span class="phone-digits">(866) 850-5263</span></a></li>
           <li><a href="mailto:info@westshorelandsales.com">info@westshorelandsales.com</a></li>
-          <li><a href="#reserve">Reserve VIP appointment</a></li>
         </ul>
       </div>
     </div>
