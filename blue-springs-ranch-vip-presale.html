@@ -46,11 +46,10 @@
       </div>
     </div>
     <div class="lp-hero-grid">
-      <div class="video-frame">
-        <div class="video-inner">
-          <button class="play-btn" aria-label="Play Blue Springs Ranch video (placeholder)">▶</button>
-          <p>Blue Springs Ranch video · coming soon</p>
-        </div>
+      <div class="video-frame video-filled">
+        <video controls preload="metadata" poster="images/bsr-lot-drone-1.webp">
+          <source src="videos/bsr-drone.mp4" type="video/mp4" />
+        </video>
       </div>
       <!-- Form submission is not wired up yet — pending decision on Formable vs. another provider. -->
       <form class="lp-form-card" id="reserve" action="#" method="POST" onsubmit="return false;">
