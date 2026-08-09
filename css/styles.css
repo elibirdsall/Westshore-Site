@@ -378,7 +378,7 @@ select:focus-visible, textarea:focus-visible {
 /* video placeholder */
 .video-frame {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   background: var(--teal-deepest);
   border: 1px dashed var(--line);
   display: grid;
@@ -942,7 +942,7 @@ button.gallery-tile img { transition: transform 0.35s ease; }
 .lp-contact-row .lp-ico { color: var(--orange); }
 
 .lp-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: center; }
-.lp-hero-grid .video-frame { aspect-ratio: 16 / 9; border-color: rgba(255, 255, 255, 0.4); }
+.lp-hero-grid .video-frame { border-color: rgba(255, 255, 255, 0.4); }
 
 .lp-form-card {
   background: var(--paper);
