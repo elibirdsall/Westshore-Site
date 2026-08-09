@@ -300,9 +300,8 @@ select:focus-visible, textarea:focus-visible {
   color: var(--teal-soft);
 }
 .hero-phone a { color: #fff; text-decoration-color: var(--orange); }
-.phone-link { display: inline-flex; flex-direction: column; line-height: 1.15; vertical-align: middle; }
+.phone-link { display: inline-flex; align-items: center; vertical-align: middle; }
 .phone-word { font-weight: 700; font-size: 1.35em; letter-spacing: 0.06em; }
-.phone-digits { font-size: 0.7em; opacity: 0.85; }
 
 /* ---- communities (parcel cards) ------------------------------------------ */
 
