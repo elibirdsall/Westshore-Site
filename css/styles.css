@@ -405,7 +405,14 @@ select:focus-visible, textarea:focus-visible {
   color: var(--teal-soft);
 }
 .video-frame.video-filled { border-style: solid; padding: 0; }
-.video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .deed {
   background: var(--paper);
