@@ -1,0 +1,13 @@
+{
+  "name": "westshore-site",
+  "version": "1.0.0",
+  "description": "Westshore Land Sales - Premium Florida Land Sales",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static site - no build step required'",
+    "test": "echo 'No tests configured'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.0"
+  }
+}
