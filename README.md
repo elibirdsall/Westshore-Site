@@ -18,6 +18,9 @@ blog.html                      Blog listing — auto-generated post grid
 financing.html                 Financing category breakdown
 blue-springs-ranch.html Blue Springs Ranch community page (URL kept
                                from the retired Westshore Pines Ranches page)
+blue-springs-ranch-vip-presale.html  Blue Springs Ranch ad landing page
+thank-you.html                 Post-submit confirmation page (/thank-you) —
+                               all lead forms redirect here on success
 css/styles.css                 All styling + design tokens (top of file)
 js/main.js                     Contact-form submit (Formspree) + mobile nav
 images/                        Hero, gallery, and community photos (webp)
@@ -84,13 +87,18 @@ Decap's `github` backend needs an OAuth app so the `/admin` login works:
    URL (GitHub OAuth Apps support only one callback URL) and `base_url` in
    `admin/config.yml` to match.
 
-## Contact form
+## Lead forms
 
-Fields: first name, last name, email, phone, and a "Community interested in"
-dropdown (Blue Springs Ranch / Not sure yet), plus the SMS/email consent line. Submits via `fetch` to Formspree
-(`https://formspree.io/f/mzdneqje`), handled in `js/main.js`; the `<form>`
+Every lead form on the site (home, Blue Springs Ranch, and the Blue Springs
+Ranch VIP presale landing page) carries the `js-lead-form` class. `js/main.js`
+wires all of them the same way: submit via `fetch` to each form's own
+Formspree endpoint, then redirect to `/thank-you` on success; the `<form>`
 also carries a matching `action`/`method` as a no-JS fallback. Each page sets
 a `_subject` hidden field so replies from Formspree are easy to tell apart.
+
+- Home + Blue Springs Ranch: `https://formspree.io/f/mzdneqje`
+- Blue Springs Ranch VIP presale: `https://formspree.io/f/xbgrayaj` (separate
+  Formspree account, kept isolated for ad-campaign tracking)
 
 ## Design
 

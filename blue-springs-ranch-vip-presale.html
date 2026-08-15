@@ -59,8 +59,7 @@
           <source src="videos/bsr-drone.mp4" type="video/mp4" />
         </video>
       </div>
-      <!-- Form submission is not wired up yet — pending decision on Formable vs. another provider. -->
-      <form class="lp-form-card" id="reserve" action="#" method="POST" onsubmit="return false;">
+      <form class="lp-form-card js-lead-form" id="reserve" action="https://formspree.io/f/xbgrayaj" method="POST">
         <div class="lp-form-head">
           <span class="lp-form-kicker">Request More Information · Appointments Open September 12</span>
           <h2 class="display">Request More Information</h2>
@@ -82,6 +81,7 @@
             <option>Not sure yet</option>
           </select>
         </div>
+        <p class="form-error" id="reserve-error" style="display:none" role="alert"></p>
         <button type="submit" class="btn btn-orange">Request More Information</button>
         <p class="form-consent">By subscribing, you agree to receive marketing email, phone calls, voicemail and text messages at the phone number and email address provided. Reply STOP to cancel. Msg rates may apply.</p>
       </form>
