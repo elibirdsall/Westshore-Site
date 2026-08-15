@@ -1,59 +1,62 @@
 // Westshore Land Sales — static site scripts
 
-// Contact form: submit to Formspree via fetch (AJAX) so the page never
-// reloads; falls back to a normal POST if JS is unavailable.
+// Lead forms: submit to Formspree via fetch (AJAX) so the page never
+// reloads, then redirect to /thank-you on success; falls back to a normal
+// POST if JS is unavailable. Every form with the js-lead-form class is
+// wired up the same way, regardless of which Formspree endpoint it posts to.
 (function () {
-  var form = document.getElementById("demo-form");
-  if (!form) return;
-  var success = document.getElementById("demo-success");
-  var error = document.getElementById("demo-error");
-  var submitBtn = form.querySelector('button[type="submit"]');
-  var submitLabel = submitBtn ? submitBtn.textContent : "";
+  var forms = document.querySelectorAll(".js-lead-form");
+  if (!forms.length) return;
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (error) {
-      error.style.display = "none";
-      error.textContent = "";
-    }
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending…";
-    }
+  forms.forEach(function (form) {
+    var error = form.querySelector(".form-error");
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var submitLabel = submitBtn ? submitBtn.textContent : "";
 
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" },
-    })
-      .then(function (response) {
-        if (response.ok) {
-          form.style.display = "none";
-          if (success) success.style.display = "grid";
-          return;
-        }
-        return response.json().then(function (data) {
-          var message =
-            data && data.errors && data.errors.length
-              ? data.errors.map(function (err) { return err.message; }).join(", ")
-              : "Something went wrong. Please try again or call us directly.";
-          throw new Error(message);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (error) {
+        error.style.display = "none";
+        error.textContent = "";
+      }
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (response) {
+          if (response.ok) {
+            window.location.href = "/thank-you";
+            return;
+          }
+          return response.json().then(function (data) {
+            var message =
+              data && data.errors && data.errors.length
+                ? data.errors.map(function (err) { return err.message; }).join(", ")
+                : "Something went wrong. Please try again or call us directly.";
+            throw new Error(message);
+          });
+        })
+        .catch(function (err) {
+          if (error) {
+            error.textContent =
+              (err && err.message) ||
+              "Sorry, we couldn't send your request. Please try again or call us directly.";
+            error.style.display = "block";
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitLabel;
+          }
         });
-      })
-      .catch(function (err) {
-        if (error) {
-          error.textContent =
-            (err && err.message) ||
-            "Sorry, we couldn't send your request. Please try again or call us directly.";
-          error.style.display = "block";
-        }
-      })
-      .finally(function () {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = submitLabel;
-        }
-      });
+    });
   });
 })();
 
