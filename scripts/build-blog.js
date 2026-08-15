@@ -57,7 +57,7 @@ const SITE_HEAD = (title, description) => `<meta charset="utf-8" />
 <meta name="description" content="${escapeHtml(description)}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/styles.css" />
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

@@ -60,7 +60,7 @@ select:focus-visible, textarea:focus-visible {
 
 .display {
   font-family: var(--font-display), Impact, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   line-height: 0.95;
@@ -523,14 +523,14 @@ select:focus-visible, textarea:focus-visible {
 .post-body { max-width: 74ch; }
 .post-body h2 {
   font-family: var(--font-display), Impact, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 1.6rem;
   margin: 32px 0 12px;
 }
 .post-body h3 {
   font-family: var(--font-display), Impact, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 1.3rem;
   margin: 26px 0 10px;
