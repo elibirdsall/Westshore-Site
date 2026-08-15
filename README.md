@@ -96,9 +96,8 @@ Formspree endpoint, then redirect to `/thank-you` on success; the `<form>`
 also carries a matching `action`/`method` as a no-JS fallback. Each page sets
 a `_subject` hidden field so replies from Formspree are easy to tell apart.
 
-- Home + Blue Springs Ranch: `https://formspree.io/f/mzdneqje`
-- Blue Springs Ranch VIP presale: `https://formspree.io/f/xbgrayaj` (separate
-  Formspree account, kept isolated for ad-campaign tracking)
+All three forms post to the same Formspree endpoint:
+`https://formspree.io/f/xbgrayaj`.
 
 ## Design
 
