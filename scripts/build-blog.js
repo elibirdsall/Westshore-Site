@@ -51,7 +51,16 @@ function readPosts() {
     .sort((a, b) => b.date - a.date);
 }
 
-const SITE_HEAD = (title, description) => `<meta charset="utf-8" />
+const SITE_HEAD = (title, description) => `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P5JB6EWF5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P5JB6EWF5Q');
+</script>
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${escapeHtml(title)} — Westshore Land Sales</title>
 <meta name="description" content="${escapeHtml(description)}" />
