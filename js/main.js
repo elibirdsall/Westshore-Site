@@ -31,7 +31,8 @@
       })
         .then(function (response) {
           if (response.ok) {
-            window.location.href = "/thank-you";
+            var source = form.getAttribute("data-source") || "unknown";
+            window.location.href = "/thank-you?source=" + encodeURIComponent(source);
             return;
           }
           return response.json().then(function (data) {

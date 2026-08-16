@@ -9,6 +9,16 @@
   gtag('js', new Date());
 
   gtag('config', 'G-P5JB6EWF5Q');
+
+  // Conversion event: fires only when we arrived via a lead form redirect
+  // (js/main.js appends ?source=<page>), so direct visits/refreshes of this
+  // page don't inflate the lead count. Mark generate_lead — not the plain
+  // page_view — as the Key Event/conversion in GA4.
+  (function () {
+    var source = new URLSearchParams(window.location.search).get("source");
+    if (!source) return;
+    gtag('event', 'generate_lead', { form_source: source });
+  })();
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />

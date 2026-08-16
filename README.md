@@ -99,6 +99,21 @@ a `_subject` hidden field so replies from Formspree are easy to tell apart.
 All three forms post to the same Formspree endpoint:
 `https://formspree.io/f/xbgrayaj`.
 
+## Conversion tracking
+
+Google tag (gtag.js, `G-P5JB6EWF5Q`) is installed at the top of every page's
+`<head>`, and in the blog post template in `scripts/build-blog.js` so future
+posts pick it up too. Every page fires GA4's automatic `page_view`.
+
+Lead-form conversions use a dedicated event instead of the raw page view, so
+a refreshed or bookmarked `/thank-you` visit doesn't inflate the count. Each
+`js-lead-form` carries a `data-source` attribute (`home`,
+`blue-springs-ranch`, `vip-presale`); `js/main.js` appends it to the redirect
+as `/thank-you?source=<value>`, and `thank-you.html` fires
+`gtag('event', 'generate_lead', { form_source: <value> })` only when that
+query param is present. In GA4, mark `generate_lead` (not `page_view`) as
+the Key Event/conversion.
+
 ## Design
 
 Teal / white / orange theme: teal is dominant, generous white space, and
