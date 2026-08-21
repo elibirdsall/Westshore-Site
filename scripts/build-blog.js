@@ -11,6 +11,19 @@ const POSTS_DIR = path.join(ROOT, "content", "posts");
 const BLOG_OUT_DIR = path.join(ROOT, "blog");
 const BLOG_HTML = path.join(ROOT, "blog.html");
 const INDEX_HTML = path.join(ROOT, "index.html");
+const SITEMAP_XML = path.join(ROOT, "sitemap.xml");
+const SITE_URL = "https://westshorelandsales.com";
+
+// Static, non-generated pages included in the sitemap. The VIP presale ad
+// landing page is deliberately left out here — it's managed by hand since
+// paid traffic points at it directly.
+const STATIC_PAGES = [
+  { path: "/", priority: "1.0", changefreq: "weekly" },
+  { path: "/blue-springs-ranch", priority: "0.9", changefreq: "weekly" },
+  { path: "/financing", priority: "0.7", changefreq: "monthly" },
+  { path: "/developer", priority: "0.6", changefreq: "monthly" },
+  { path: "/blog", priority: "0.8", changefreq: "weekly" },
+];
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({
@@ -51,7 +64,11 @@ function readPosts() {
     .sort((a, b) => b.date - a.date);
 }
 
-const SITE_HEAD = (title, description) => `<!-- Google tag (gtag.js) -->
+const SITE_HEAD = (title, description, canonicalPath, imagePath) => {
+  const fullTitle = `${escapeHtml(title)} — Westshore Land Sales`;
+  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
+  const imageUrl = imagePath ? `${SITE_URL}${imagePath}` : "";
+  return `<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5JB6EWF5Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -62,8 +79,14 @@ const SITE_HEAD = (title, description) => `<!-- Google tag (gtag.js) -->
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${escapeHtml(title)} — Westshore Land Sales</title>
+<title>${fullTitle}</title>
 <meta name="description" content="${escapeHtml(description)}" />
+<link rel="canonical" href="${canonicalUrl}" />
+<meta property="og:title" content="${fullTitle}" />
+<meta property="og:description" content="${escapeHtml(description)}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="${canonicalUrl}" />
+${imageUrl ? `<meta property="og:image" content="${imageUrl}" />\n` : ""}<meta name="twitter:card" content="${imageUrl ? "summary_large_image" : "summary"}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
@@ -72,6 +95,7 @@ const SITE_HEAD = (title, description) => `<!-- Google tag (gtag.js) -->
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>`;
+};
 
 const SITE_HEADER = `<header class="site-header">
   <div class="wrap">
@@ -135,10 +159,24 @@ const SITE_FOOTER = `<footer class="site-footer">
 </footer>`;
 
 function renderPostPage(post) {
+  const canonicalPath = `/blog/${post.slug}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt || post.title,
+    datePublished: post.date.toISOString(),
+    author: { "@type": "Organization", name: "Westshore Land Sales" },
+    publisher: { "@type": "Organization", name: "Westshore Land Sales" },
+    mainEntityOfPage: `${SITE_URL}${canonicalPath}`,
+    ...(post.featuredImage ? { image: `${SITE_URL}${post.featuredImage}` } : {}),
+  };
+
   return `<!doctype html>
 <html lang="en">
 <head>
-${SITE_HEAD(post.title, post.excerpt || post.title)}
+${SITE_HEAD(post.title, post.excerpt || post.title, canonicalPath, post.featuredImage)}
+<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body>
 
@@ -169,6 +207,31 @@ ${SITE_FOOTER}
 </body>
 </html>
 `;
+}
+
+function generateSitemap(posts) {
+  const today = new Date().toISOString().slice(0, 10);
+  const staticEntries = STATIC_PAGES.map(
+    (p) => `  <url>
+    <loc>${SITE_URL}${p.path}</loc>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority}</priority>
+  </url>`
+  );
+  const postEntries = posts.map(
+    (post) => `  <url>
+    <loc>${SITE_URL}/blog/${post.slug}</loc>
+    <lastmod>${post.date.toISOString().slice(0, 10)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`
+  );
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${staticEntries.concat(postEntries).join("\n")}
+</urlset>
+`;
+  fs.writeFileSync(SITEMAP_XML, xml);
 }
 
 function renderCard(post) {
@@ -226,6 +289,8 @@ function main() {
     teaserCards || noPosts
   );
   fs.writeFileSync(INDEX_HTML, indexHtml);
+
+  generateSitemap(posts);
 
   console.log(`Rendered ${posts.length} post(s).`);
 }
