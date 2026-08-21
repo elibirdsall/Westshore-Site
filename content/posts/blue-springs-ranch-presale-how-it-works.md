@@ -9,13 +9,13 @@ featured_image: /images/bsr-lots.png
 ---
 # How the Blue Springs Ranch Presale Works
 
-If you have been searching for land for sale near Marianna, Florida, you have probably come across Blue Springs Ranch, a private collection of 23 individually surveyed parcels ranging from 10 to 17 acres, just a mile from the crystal-clear waters of Blue Springs Recreation Area. Before these lots are offered to the general public, we are giving a limited number of qualified buyers the chance to reserve their favorite parcel first. Here is exactly how that process works.
+If you have been searching for land for sale near Marianna, Florida, you have probably come across [Blue Springs Ranch](/blue-springs-ranch-vip-presale), a private collection of 23 individually surveyed parcels ranging from 10 to 17 acres, just a mile from the crystal-clear waters of Blue Springs Recreation Area. Before these lots are offered to the general public, we are giving a limited number of qualified buyers the chance to reserve their favorite parcel first. Here is exactly how that process works.
 
 ## The Presale Is Open Now
 
 You do not have to wait for a specific date to get started. Reservations at Blue Springs Ranch are open today, on a first-come, first-served basis. With only 23 parcels in the entire community, and several already generating serious interest, the properties with road frontage, mature hardwoods, or the best building sites are the ones buyers ask about first.
 
-If you already know which parcel you want, there is no reason to wait. Reach out to our team and we will walk you through reserving it right away.
+If you already know which parcel you want, there is no reason to wait. [Reserve your lot now](/blue-springs-ranch-vip-presale#reserve) and our team will walk you through the next steps right away.
 
 ## Join Us for the September 12 Event
 
@@ -40,6 +40,6 @@ Part of what makes this community different is what sits right outside the gate.
 
 ## Reserve Your Lot Today
 
-Whether you are ready to reserve a parcel now or want to see it in person at the September 12 event, the first step is the same: reach out to our team. With a limited number of tracts available, we expect many, or all, of the properties to be reserved quickly.
+Whether you are ready to reserve a parcel now or want to see it in person at the September 12 event, the first step is the same: [contact our team](/#contact). With a limited number of tracts available, we expect many, or all, of the properties to be reserved quickly.
 
-Explore Blue Springs Ranch with Westshore Land Sales and reserve your place in one of North Florida's most exciting new land communities.
+[Explore Blue Springs Ranch](/blue-springs-ranch-vip-presale) with Westshore Land Sales and reserve your place in one of North Florida's most exciting new land communities.
