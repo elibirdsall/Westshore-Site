@@ -9,16 +9,6 @@
   gtag('js', new Date());
 
   gtag('config', 'G-P5JB6EWF5Q');
-
-  // Conversion event: fires only when we arrived via a lead form redirect
-  // (js/main.js appends ?source=<page>), so direct visits/refreshes of this
-  // page don't inflate the lead count. Mark generate_lead — not the plain
-  // page_view — as the Key Event/conversion in GA4.
-  (function () {
-    var source = new URLSearchParams(window.location.search).get("source");
-    if (!source) return;
-    gtag('event', 'generate_lead', { form_source: source });
-  })();
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,10 +17,9 @@
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<title>Thank You — Westshore Land Sales</title>
-<meta name="robots" content="noindex, follow" />
-<meta name="description" content="Thanks for requesting information from Westshore Land Sales. A land specialist will be in touch shortly." />
+<title>Page Not Found — Westshore Land Sales</title>
 <meta name="robots" content="noindex,follow" />
+<meta name="description" content="The page you're looking for can't be found. Explore Westshore Land Sales' Florida land communities, financing options, and blog instead." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
@@ -78,49 +67,50 @@
 </header>
 
 <main>
-<!-- THANK YOU HERO -->
+<!-- 404 HERO -->
 <section class="chero on-dark">
-  <div class="chero-bg"><img src="images/bsr-lot-drone-1.webp" alt="Aerial drone view of a Blue Springs Ranch parcel" /></div>
+  <div class="chero-bg"><img src="images/hero-sunset-land.webp" alt="" aria-hidden="true" /></div>
   <div class="wrap">
-    <span class="eyebrow">Request received</span>
-    <h1 class="display">Thank You</h1>
-    <p class="chero-lede">Your request has been submitted. A Westshore Land Sales specialist will be in touch shortly to help you find the right piece of Florida land.</p>
+    <span class="eyebrow">404 error</span>
+    <h1 class="display">We Couldn't Find That Page</h1>
+    <p class="chero-lede">The page you're looking for may have moved or no longer exists. Let's get you back on track.</p>
     <div class="chero-meta">
-      <span>Request confirmed</span>
-      <span>We'll reach out soon</span>
-      <span>866-850-LAND (5263)</span>
+      <span>Check the communities below</span>
+      <span>Or call 866-850-LAND (5263)</span>
     </div>
   </div>
 </section>
 
-<!-- WHAT HAPPENS NEXT -->
+<!-- QUICK LINKS -->
 <section class="section">
   <div class="wrap dev-split">
     <div class="dev-copy">
-      <span class="eyebrow">What happens next</span>
-      <h2 class="display">We'll be in touch soon</h2>
+      <span class="eyebrow">Where to next</span>
+      <h2 class="display">Explore Westshore Land Sales</h2>
       <ul class="feature-list">
-        <li>A land specialist reviews your request</li>
-        <li>You'll get a call or email to discuss what you're looking for</li>
-        <li>We share available parcels, pricing, maps, and financing options</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blue-springs-ranch">Blue Springs Ranch</a></li>
+        <li><a href="/financing">Financing Options</a></li>
+        <li><a href="/developer">About the Developer</a></li>
+        <li><a href="/blog">Land Buying Blog</a></li>
       </ul>
-      <p style="margin-top:16px;color:var(--muted)">Prefer to talk now? Call us at <a href="tel:8668505263" style="color:var(--teal)" class="phone-link"><span class="phone-word">866-850-LAND (5263)</span></a> or email <a href="mailto:info@westshorelandsales.com" style="color:var(--teal)">info@westshorelandsales.com</a>.</p>
+      <p style="margin-top:16px;color:var(--muted)">Can't find what you need? Call us at <a href="tel:8668505263" style="color:var(--teal)" class="phone-link"><span class="phone-word">866-850-LAND (5263)</span></a> or email <a href="mailto:info@westshorelandsales.com" style="color:var(--teal)">info@westshorelandsales.com</a>.</p>
     </div>
     <div class="dev-media">
-      <img src="images/bsr-lot-drone-2.webp" alt="Aerial drone view of a Blue Springs Ranch parcel" />
+      <img src="images/bsr-lot-drone-1.webp" alt="Aerial drone view of a Blue Springs Ranch parcel along a wooded rural road" />
     </div>
   </div>
 </section>
 
-<!-- WHILE YOU WAIT -->
+<!-- CTA -->
 <section class="cta-banner">
   <div class="wrap">
-    <span class="eyebrow">While you wait</span>
-    <h2 class="display">Take a look around</h2>
-    <p>Browse our communities and financing options while a land specialist prepares your information.</p>
+    <span class="eyebrow">Get in touch</span>
+    <h2 class="display">Let Us Help You Find the Right Property</h2>
+    <p>Tell us what you're looking for, and a land specialist will follow up with available parcels and pricing.</p>
     <div class="hero-ctas">
-      <a class="btn btn-orange" href="/#communities">Browse Communities</a>
-      <a class="btn btn-teal" href="/financing">Explore Financing</a>
+      <a class="btn btn-orange" href="/#contact">Request Info</a>
+      <a class="btn btn-teal" href="/#communities">Browse Communities</a>
     </div>
   </div>
 </section>
