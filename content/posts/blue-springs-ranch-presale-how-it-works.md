@@ -1,10 +1,10 @@
 ---
 title: How the Blue Springs Ranch Presale Works
-date: 2026-08-21T09:00:00.000-04:00
+date: 2026-08-22T09:00:00.000-04:00
 category: Community News
-excerpt: Blue Springs Ranch is now open for a private presale near Marianna,
-  FL. Here's how reservations work, what to expect at our September 12
-  event, and how to lock in your 10+ acre parcel.
+excerpt: Blue Springs Ranch is now open for a private presale near Marianna, FL.
+  Here's how reservations work, what to expect at our September 12 event, and
+  how to lock in your 10+ acre parcel.
 featured_image: /images/bsr-lots.png
 ---
 # How the Blue Springs Ranch Presale Works
