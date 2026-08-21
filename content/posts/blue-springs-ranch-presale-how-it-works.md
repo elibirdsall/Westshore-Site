@@ -9,11 +9,11 @@ featured_image: /images/bsr-lots.png
 ---
 # How the Blue Springs Ranch Presale Works
 
-If you have been searching for land for sale near Marianna, Florida, you have probably come across [Blue Springs Ranch](/blue-springs-ranch-vip-presale), a private collection of 23 individually surveyed parcels ranging from 10 to 17 acres, just a mile from the crystal-clear waters of Blue Springs Recreation Area. Before these lots are offered to the general public, we are giving a limited number of qualified buyers the chance to reserve their favorite parcel first. Here is exactly how that process works.
+If you have been searching for 10 acre land for sale in Florida, you have probably come across [Blue Springs Ranch](/blue-springs-ranch-vip-presale), a private collection of 23 individually surveyed parcels ranging from 10 to 17 acres, just a mile from the crystal-clear waters of Blue Springs Recreation Area. Before these lots are offered to the general public, we are giving a limited number of qualified buyers the chance to reserve their favorite parcel first. Here is exactly how that process works.
 
 ## The Presale Is Open Now
 
-You do not have to wait for a specific date to get started. Reservations at Blue Springs Ranch are open today, on a first-come, first-served basis. With only 23 parcels in the entire community, and several already generating serious interest, the properties with road frontage, mature hardwoods, or the best building sites are the ones buyers ask about first.
+You do not have to wait for a specific date to get started. If you are ready to buy land in Florida, reservations at Blue Springs Ranch are open today, on a first-come, first-served basis. With only 23 parcels in the entire community, and several already generating serious interest, the properties with road frontage, mature hardwoods, or the best building sites are the ones buyers ask about first.
 
 If you already know which parcel you want, there is no reason to wait. [Reserve your lot now](/blue-springs-ranch-vip-presale#reserve) and our team will walk you through the next steps right away.
 
@@ -36,7 +36,7 @@ Buying land can feel complicated, especially for first-time acreage buyers. We h
 
 ## Why Buyers Are Drawn to Blue Springs Ranch
 
-Part of what makes this community different is what sits right outside the gate. Blue Springs Recreation Area, one of North Florida's most beautiful natural springs, is about a mile down the road, with swimming, kayaking, paddleboarding, and freshwater scuba diving. When it is time for the coast, Panama City Beach and Destin are both about an hour away. It is a rare combination: quiet, private acreage with both springs and sugar-white sand within easy reach.
+Part of what makes this community different is what sits right outside the gate. Blue Springs Recreation Area, one of North Florida's most beautiful natural springs, is about a mile down the road, with swimming, kayaking, paddleboarding, and freshwater scuba diving. When it is time for the coast, this is land near Panama City Beach and land near Destin, Florida — both about an hour away. It is a rare combination: quiet, private acreage with both springs and sugar-white sand within easy reach.
 
 ## Reserve Your Lot Today
 

@@ -14,12 +14,11 @@ const INDEX_HTML = path.join(ROOT, "index.html");
 const SITEMAP_XML = path.join(ROOT, "sitemap.xml");
 const SITE_URL = "https://westshorelandsales.com";
 
-// Static, non-generated pages included in the sitemap. The VIP presale ad
-// landing page is deliberately left out here — it's managed by hand since
-// paid traffic points at it directly.
+// Static, non-generated pages included in the sitemap.
 const STATIC_PAGES = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
   { path: "/blue-springs-ranch", priority: "0.9", changefreq: "weekly" },
+  { path: "/blue-springs-ranch-vip-presale", priority: "0.9", changefreq: "weekly" },
   { path: "/financing", priority: "0.7", changefreq: "monthly" },
   { path: "/developer", priority: "0.6", changefreq: "monthly" },
   { path: "/blog", priority: "0.8", changefreq: "weekly" },
