@@ -51,6 +51,6 @@ For anyone evaluating acreage near Marianna or Blue Springs, a few things are wo
 
 ## A Community Built Around This Exact Lifestyle
 
-This kind of lifestyle is exactly what drew us to develop communities like Blue Springs Ranch: 23 individually surveyed parcels, each 10 to 17 acres, about a mile from Blue Springs Recreation Area and roughly an hour from the Gulf. Every parcel comes with surveyed boundaries, completed title work, a warranty deed, and road frontage, with our team guiding buyers from reservation through closing.
+This kind of lifestyle is exactly what drew us to develop communities like [Blue Springs Ranch](/blue-springs-ranch-vip-presale): 23 individually surveyed parcels, each 10 to 17 acres, about a mile from Blue Springs Recreation Area and roughly an hour from the Gulf. Every parcel comes with surveyed boundaries, completed title work, a warranty deed, and road frontage, with our team guiding buyers from reservation through closing.
 
-Explore premium Florida land with Westshore Land Sales and find your opportunity in Jackson County.
+[Reserve your lot at Blue Springs Ranch](/blue-springs-ranch-vip-presale#reserve) or [contact our team](/#contact) to explore more premium Florida land with Westshore Land Sales.
