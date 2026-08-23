@@ -67,7 +67,14 @@ const SITE_HEAD = (title, description, canonicalPath, imagePath) => {
   const fullTitle = `${escapeHtml(title)} — Westshore Land Sales`;
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const imageUrl = imagePath ? `${SITE_URL}${imagePath}` : "";
-  return `<!-- Google tag (gtag.js) -->
+  return `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KL2CPJW8');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5JB6EWF5Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -183,6 +190,10 @@ ${SITE_HEAD(post.title, post.excerpt || post.title, canonicalPath, post.featured
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL2CPJW8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 ${SITE_HEADER}
 
