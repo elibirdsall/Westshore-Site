@@ -744,6 +744,23 @@ button.gallery-tile img { transition: transform 0.35s ease; }
   letter-spacing: 0.06em;
   line-height: 1.8;
 }
+.footer-legal-links { margin-top: 6px; }
+.footer-legal-links a { color: var(--teal-soft); }
+.footer-address {
+  margin-top: 4px;
+  font-size: 0.56rem;
+  color: #10585f;
+}
+
+/* ---- legal pages (privacy / terms) --------------------------------------- */
+
+.legal-wrap { max-width: 760px; }
+.legal-page .updated { color: var(--muted); margin-bottom: 32px; }
+.legal-page h2 { font-size: 1.4rem; margin: 36px 0 12px; }
+.legal-page h2:first-of-type { margin-top: 0; }
+.legal-page p { margin-bottom: 14px; }
+.legal-page ul { margin: 0 0 14px 22px; }
+.legal-page li { margin-bottom: 6px; }
 
 /* ---- developer page ------------------------------------------------------ */
 

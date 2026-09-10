@@ -165,7 +165,10 @@ const SITE_FOOTER = `<footer class="site-footer">
         </ul>
       </div>
     </div>
-    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. A subsidiary of Westshore Acquisitions, LLC.</div>
+    <div class="footer-legal">© 2026 Westshore Land Sales. All rights reserved. A subsidiary of Westshore Acquisitions, LLC.
+      <div class="footer-legal-links"><a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a></div>
+      <div class="footer-address">4212 W San Juan St, Tampa, FL 33629</div>
+    </div>
   </div>
 </footer>`;
 
