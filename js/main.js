@@ -1,9 +1,9 @@
 // Westshore Land Sales — static site scripts
 
-// Lead forms: submit to Formspree via fetch (AJAX) so the page never
-// reloads, then redirect to /thank-you on success; falls back to a normal
-// POST if JS is unavailable. Every form with the js-lead-form class is
-// wired up the same way, regardless of which Formspree endpoint it posts to.
+// Lead forms: submit to a GoHighLevel inbound webhook via fetch (AJAX) so
+// the page never reloads, then redirect to /thank-you on success. Every
+// form with the js-lead-form class is wired up the same way. GHL's webhook
+// expects a JSON body, so form fields are collected into a plain object.
 (function () {
   var forms = document.querySelectorAll(".js-lead-form");
   if (!forms.length) return;
@@ -24,10 +24,15 @@
         submitBtn.textContent = "Sending…";
       }
 
+      var data = {};
+      new FormData(form).forEach(function (value, key) {
+        data[key] = value;
+      });
+
       fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
       })
         .then(function (response) {
           if (response.ok) {
@@ -35,13 +40,7 @@
             window.location.href = "/thank-you?source=" + encodeURIComponent(source);
             return;
           }
-          return response.json().then(function (data) {
-            var message =
-              data && data.errors && data.errors.length
-                ? data.errors.map(function (err) { return err.message; }).join(", ")
-                : "Something went wrong. Please try again or call us directly.";
-            throw new Error(message);
-          });
+          throw new Error("Something went wrong. Please try again or call us directly.");
         })
         .catch(function (err) {
           if (error) {

@@ -22,7 +22,7 @@ blue-springs-ranch-vip-presale.html  Blue Springs Ranch ad landing page
 thank-you.html                 Post-submit confirmation page (/thank-you) —
                                all lead forms redirect here on success
 css/styles.css                 All styling + design tokens (top of file)
-js/main.js                     Contact-form submit (Formspree) + mobile nav
+js/main.js                     Contact-form submit (GoHighLevel) + mobile nav
 images/                        Hero, gallery, and community photos (webp)
 vercel.json                    Clean-URL config + /admin OAuth rewrites
 admin/                         Decap CMS (content editor UI)
@@ -91,13 +91,14 @@ Decap's `github` backend needs an OAuth app so the `/admin` login works:
 
 Every lead form on the site (home, Blue Springs Ranch, and the Blue Springs
 Ranch VIP presale landing page) carries the `js-lead-form` class. `js/main.js`
-wires all of them the same way: submit via `fetch` to each form's own
-Formspree endpoint, then redirect to `/thank-you` on success; the `<form>`
-also carries a matching `action`/`method` as a no-JS fallback. Each page sets
-a `_subject` hidden field so replies from Formspree are easy to tell apart.
+wires all of them the same way: collect the fields into a JSON object and
+`fetch`-POST it to each form's own webhook endpoint, then redirect to
+`/thank-you` on success; the `<form>` also carries a matching `action`/`method`
+as a no-JS fallback.
 
-All three forms post to the same Formspree endpoint:
-`https://formspree.io/f/xbgrayaj`.
+All three forms post to the same GoHighLevel inbound webhook, which creates/
+updates a Contact in GHL:
+`https://services.leadconnectorhq.com/hooks/VIOM5f8DagSb90cC0EXo/webhook-trigger/eda9d136-0f28-4a94-9db3-dcd1b2f39090`.
 
 ## Conversion tracking
 
