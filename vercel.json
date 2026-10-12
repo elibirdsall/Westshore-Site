@@ -3,10 +3,25 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/auth", "destination": "/api/auth" },
-    { "source": "/callback", "destination": "/api/callback" }
+    {
+      "source": "/auth",
+      "destination": "/api/auth"
+    },
+    {
+      "source": "/callback",
+      "destination": "/api/callback"
+    }
   ],
   "redirects": [
-    { "source": "/community-westshore-pines", "destination": "/blue-springs-ranch", "permanent": true }
+    {
+      "source": "/community-westshore-pines",
+      "destination": "/blue-springs-ranch",
+      "permanent": true
+    },
+    {
+      "source": "/blog/welcome-to-the-blog",
+      "destination": "/blog",
+      "permanent": true
+    }
   ]
 }
