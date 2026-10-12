@@ -34,8 +34,8 @@ Call the county planning and zoning office with the parcel ID and ask three ques
 
 Florida has more wetlands than most states, and a parcel can look dry in October and hold standing water in July. Two things to check:
 
-- **FEMA flood zone.** Look the parcel up on the FEMA Flood Map Service Center. Building in a high-risk zone (zones beginning with A or V) usually means elevated construction and required flood insurance if you finance.
-- **Wetlands.** Building in or filling wetlands generally requires an Environmental Resource Permit from your regional water management district, and sometimes approval from the U.S. Army Corps of Engineers.
+- **FEMA flood zone.** Look the parcel up on the FEMA Flood Map Service Center. A parcel's flood zone can affect how and where you build, and what insurance costs.
+- **Wetlands.** Building in or near wetlands can require extra permits. Ask the county what applies before you plan a homesite.
 
 A parcel with some wetland acreage isn't a dealbreaker. It's often great for wildlife. Just make sure your planned homesite sits on high, dry ground.
 
@@ -47,7 +47,7 @@ Before you buy land you plan to build on, ask whether a soil evaluation has been
 
 ## 5. Water: Wells and Water Management Districts
 
-Without city water, you'll need a private well. Florida is divided into five water management districts, and new wells require a permit from the district where your property sits. (Jackson County and most of the Panhandle fall under the Northwest Florida Water Management District.)
+Without city water, you'll need a private well. Ask the county what permits are needed to drill one on the property.
 
 Well costs vary with depth and local geology, so ask a local well driller what nearby wells typically run. Neighbors with existing wells are a great source of information, too.
 
@@ -59,15 +59,15 @@ Walk the land and look for circular depressions, sudden dips, or ponds with no o
 
 ## 7. Gopher Tortoises and Protected Wildlife
 
-This one surprises a lot of out-of-state buyers. Gopher tortoises are a protected species in Florida, and they love the same dry, sandy, high ground people like to build on. If tortoises or their burrows are within the area you plan to clear or build on, you'll need a permit from the Florida Fish and Wildlife Conservation Commission (FWC) to relocate them before work begins.
+This one surprises a lot of out-of-state buyers. Gopher tortoises are a protected species in Florida, and they love the same dry, sandy, high ground people like to build on. If you find tortoises or their burrows where you plan to clear or build, check with the Florida Fish and Wildlife Conservation Commission (FWC) about what's required before work begins.
 
-It's a manageable process, but it takes time and money. Look for burrows, which are half-moon-shaped openings in sandy soil, when you walk a property, and factor a survey into your timeline if you see them.
+Look for burrows, which are half-moon-shaped openings in sandy soil, when you walk a property, and allow extra time in your plans if you see them.
 
 ## 8. Property Taxes, Homestead, and the Agricultural Classification
 
 Florida's tax rules can work in your favor if you understand them:
 
-- **Vacant land is taxed at its full assessed value.** The homestead exemption, which can reduce your home's taxable value by up to $50,000 and caps future assessment increases, only applies once the property is your permanent residence.
+- **The homestead exemption only applies to your permanent residence.** Vacant land doesn't qualify until you've built on it and live there full time.
 - **Agricultural classification** (often called "greenbelt") can significantly lower property taxes on land used for bona fide agricultural purposes, such as cattle, hay, or timber. It's not automatic. You apply through the county property appraiser, and the use has to be genuine and ongoing.
 
 Look up the parcel's current tax bill on the county property appraiser's website, and ask whether it currently carries an agricultural classification. If it does and you don't continue that use, expect the taxes to go up.
@@ -77,7 +77,7 @@ Look up the parcel's current tax bill on the county property appraiser's website
 The deed tells you what you own. The title commitment tells you what *other people* may have rights to. Read it carefully for:
 
 - **Utility and access easements** that let others cross or use part of your land
-- **Reserved mineral or oil rights**, which exist on some Florida parcels
+- **Reserved mineral rights** held by someone other than the seller
 - **Timber rights or leases** that may let a previous owner or company harvest trees after you buy
 
 None of these are automatically bad, but you want to know about them before closing, not after. A title company or real estate attorney can explain anything you don't understand.
@@ -89,7 +89,7 @@ The purchase price is only the beginning. If you plan to build or move onto the 
 - **Power.** Ask the local electric co-op or utility how far the nearest line is. Extending service a long distance can be expensive.
 - **Clearing and a driveway.** Pine and hardwood clearing, culverts, and gravel add up quickly on a long drive.
 - **Well and septic**, as covered above.
-- **Building to Florida code.** Florida's building code includes strict wind-load requirements for hurricanes, which affects construction cost and design.
+- **Building to Florida code.** Florida's building code is designed with hurricanes in mind, which can affect construction cost and design.
 - **Insurance.** Get a homeowner's insurance quote early, as coverage in Florida varies a lot by location and construction type.
 
 Getting rough estimates on these items before you buy helps you compare parcels honestly. A cheaper parcel that needs a half mile of power line may cost more in the end than one with power at the road.
