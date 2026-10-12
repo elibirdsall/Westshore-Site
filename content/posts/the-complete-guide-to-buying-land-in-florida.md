@@ -43,7 +43,7 @@ A few essentials to check before buying rural land in Florida:
 5. **Zoning and restrictions.** Understand what the land is zoned for and whether it's unrestricted or governed by deed restrictions.
 6. **Flood zone and topography.** Especially relevant for Florida acreage — check FEMA flood maps before you buy.
 
-Buyers evaluating vacant land for sale in Florida who confirm these six items up front avoid the vast majority of surprises that come up after closing.
+Buyers evaluating vacant land for sale in Florida who confirm these six items up front avoid the vast majority of surprises that come up after closing. For a deeper look at Florida-specific issues like wetlands, septic, sinkholes, and property taxes, see [10 Things to Consider Before Buying Land in Florida](/blog/10-things-to-consider-before-buying-land-in-florida).
 
 ## How to Find Land for Sale in Florida
 

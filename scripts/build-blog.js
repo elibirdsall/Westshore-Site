@@ -56,7 +56,9 @@ function readPosts() {
         category: data.category || "Buying Guides",
         excerpt: data.excerpt || "",
         featuredImage: data.featured_image || "",
-        bodyHtml: marked.parse(content),
+        // The template already renders the title as the page's <h1>, so drop
+        // a leading "# Title" line from the body to avoid a duplicate <h1>.
+        bodyHtml: marked.parse(content.replace(/^\s*# .*(\r?\n)+/, "")),
         readMinutes,
       };
     })
