@@ -47,7 +47,7 @@ Times depend on exactly where you start and on summer beach traffic, so map the 
 
 ### Real acreage
 
-This is the big one. Instead of a lot that fits a house and a driveway, you get room for a home, a barn, a garden, a shop, trails, a pond site, or simply woods between you and the nearest neighbor. If you've been searching for [10 acre land for sale in Florida](/blue-springs-ranch-vip-presale), inland Panhandle counties are among the most practical places to find it.
+This is the big one. Instead of a lot that fits a house and a driveway, you get room for a home, a barn, a garden, a shop, trails, a pond site, or simply woods between you and the nearest neighbor. If you've been searching for [10 acre land for sale in Florida](/blue-springs-ranch), inland Panhandle counties are among the most practical places to find it.
 
 ### Privacy and quiet
 
@@ -130,4 +130,4 @@ Yes. Land loans, seller financing, HELOCs, and even retirement account options c
 
 The property sits about a mile from the clear water of Blue Springs Recreation Area and less than 10 minutes from Marianna, with Panama City Beach and the rest of the Emerald Coast within an easy day trip. Parcels start at $99,700, and financing assistance is available.
 
-If you've been looking for land near the beach and coming up short, [see the available parcels at Blue Springs Ranch](/blue-springs-ranch-vip-presale), or [contact our team](/#contact) and we'll walk you through pricing, maps, and next steps.
+If you've been looking for land near the beach and coming up short, [see the available parcels at Blue Springs Ranch](/blue-springs-ranch), or [contact our team](/#contact) and we'll walk you through pricing, maps, and next steps.

@@ -18,7 +18,6 @@ const SITE_URL = "https://westshorelandsales.com";
 const STATIC_PAGES = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
   { path: "/blue-springs-ranch", priority: "0.9", changefreq: "weekly" },
-  { path: "/blue-springs-ranch-vip-presale", priority: "0.9", changefreq: "weekly" },
   { path: "/financing", priority: "0.7", changefreq: "monthly" },
   { path: "/developer", priority: "0.6", changefreq: "monthly" },
   { path: "/blog", priority: "0.8", changefreq: "weekly" },

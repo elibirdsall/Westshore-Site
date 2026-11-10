@@ -22,6 +22,16 @@
       "source": "/blog/welcome-to-the-blog",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/blue-springs-ranch-vip-presale",
+      "destination": "/blue-springs-ranch",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blue-springs-ranch-presale-how-it-works",
+      "destination": "/blue-springs-ranch",
+      "permanent": true
     }
   ]
 }

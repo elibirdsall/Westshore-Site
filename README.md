@@ -16,9 +16,11 @@ developer.html                 About the developer (About, Our Commitment,
                                Our Communities)
 blog.html                      Blog listing — auto-generated post grid
 financing.html                 Financing category breakdown
-blue-springs-ranch.html Blue Springs Ranch community page (URL kept
-                               from the retired Westshore Pines Ranches page)
-blue-springs-ranch-vip-presale.html  Blue Springs Ranch ad landing page
+blue-springs-ranch.html        Blue Springs Ranch community page (formerly the
+                               /blue-springs-ranch-vip-presale ad landing page,
+                               which now redirects here; the original community
+                               page is preserved at git tag
+                               archive/blue-springs-ranch-original)
 thank-you.html                 Post-submit confirmation page (/thank-you) —
                                all lead forms redirect here on success
 css/styles.css                 All styling + design tokens (top of file)
@@ -109,7 +111,7 @@ posts pick it up too. Every page fires GA4's automatic `page_view`.
 Lead-form conversions use a dedicated event instead of the raw page view, so
 a refreshed or bookmarked `/thank-you` visit doesn't inflate the count. Each
 `js-lead-form` carries a `data-source` attribute (`home`,
-`blue-springs-ranch`, `vip-presale`); `js/main.js` appends it to the redirect
+`blue-springs-ranch`; older leads may show `vip-presale`); `js/main.js` appends it to the redirect
 as `/thank-you?source=<value>`, and `thank-you.html` fires
 `gtag('event', 'generate_lead', { form_source: <value> })` only when that
 query param is present. In GA4, mark `generate_lead` (not `page_view`) as

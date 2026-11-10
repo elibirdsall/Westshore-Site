@@ -39,7 +39,7 @@ The amount available depends on your home's equity and your lender's specific re
 
 In select cases, a land seller may be able to finance the purchase directly, allowing a buyer to close without going through a traditional lender at all. This can be especially useful for buyers who want to avoid a lengthy bank approval process or who do not meet every box a conventional lender requires.
 
-Not every property offers seller financing, so it is worth asking directly. At [Blue Springs Ranch](/blue-springs-ranch-vip-presale), our team can walk you through whether this option is available for a specific parcel.
+Not every property offers seller financing, so it is worth asking directly. At [Blue Springs Ranch](/blue-springs-ranch), our team can walk you through whether this option is available for a specific parcel.
 
 ## 6. Cash Purchases
 

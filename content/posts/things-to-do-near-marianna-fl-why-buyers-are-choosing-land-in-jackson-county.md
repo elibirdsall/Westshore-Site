@@ -82,4 +82,4 @@ This is the lifestyle that led us to develop [Blue Springs Ranch](/blue-springs-
 
 For a closer look at life on acreage in this part of the Panhandle, read [Buying Land Near Blue Springs: A Guide to Life on 10+ Acres in Jackson County, FL](/blog/buying-land-near-blue-springs-jackson-county-guide).
 
-[Reserve your lot at Blue Springs Ranch](/blue-springs-ranch-vip-presale#reserve) or [contact our team](/#contact) to find your piece of Florida with Westshore Land Sales.
+[Reserve your lot at Blue Springs Ranch](/blue-springs-ranch#reserve) or [contact our team](/#contact) to find your piece of Florida with Westshore Land Sales.
