@@ -19,8 +19,8 @@ financing.html                 Financing category breakdown
 blue-springs-ranch.html        Blue Springs Ranch community page (formerly the
                                /blue-springs-ranch-vip-presale ad landing page,
                                which now redirects here; the original community
-                               page is preserved at git tag
-                               archive/blue-springs-ranch-original)
+                               page is preserved in git history at commit
+                               8b6e0b5)
 thank-you.html                 Post-submit confirmation page (/thank-you) —
                                all lead forms redirect here on success
 css/styles.css                 All styling + design tokens (top of file)
