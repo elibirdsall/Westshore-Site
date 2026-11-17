@@ -1,6 +1,6 @@
 ---
 title: "Buying Horse Property in Florida: What to Look For in Pasture Acreage"
-date: 2026-11-17T09:00:00.000-05:00
+date: 2026-11-15T09:00:00.000-05:00
 category: Buying Guides
 excerpt: Why 10+ acres is the sweet spot for horse property in Florida, what
   makes good pasture, and what to check before you buy, from soil and shade to
